@@ -3,5 +3,15 @@
  * Все паршалы подключаются сюда.
  */
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+// Путь к изображениям из SASS-файла всегда такой, как из папки css
+// background-image: url('../images/demo.jpg');
+
+// Подключение файлов стилей для основных компонентов страницы
+@import './layout/hero-header';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';

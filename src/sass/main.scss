@@ -5,6 +5,7 @@
 
 // Подключение переменных и глобальных стилей
 @import './utils/vars';
+@import './utils/visually-hidden';
 
 // Подключение файлов стилей для основных компонентов страницы
 @import './layout/hero-header';

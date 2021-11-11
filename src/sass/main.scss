@@ -7,6 +7,9 @@
 @import './utils/vars';
 @import './utils/visually-hidden';
 
+@import './components/section';
+@import './components/container';
+
 // Подключение файлов стилей для основных компонентов страницы
 @import './layout/hero-header';
 @import './layout/products';

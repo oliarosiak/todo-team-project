@@ -1,12 +1,12 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  @include font(normal, 16px, 400, 28px, 0.04);
+  color: $primary-white-color;
+  background-color: $background-color;
+}
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-
-// body {
-//   font-family: ?;
-//   letter-spacing: ?;
-//   color: ?;
-//   background-color: ?;
-// }

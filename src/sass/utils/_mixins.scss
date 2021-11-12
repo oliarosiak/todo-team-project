@@ -7,6 +7,8 @@
   letter-spacing: $ls;
 }
 
+// @include font ($fs, $fz, $fw, $lh, $ls);
+
 // mixin для флекса
 @mixin flex-center($type: flex) {
   display: $type;
@@ -14,9 +16,21 @@
   align-items: center;
 }
 
+// @include flex-center($type: flex);
+
+@mixin flex($type: flex, $justify: center, $aling: center) {
+  display: $type;
+  justify-content: $justify;
+  align-items: $aling;
+}
+
+// @include flex();
+
 // mixin для background image
 @mixin background-size-repeat-position {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+// @include background-size-repeat-position();

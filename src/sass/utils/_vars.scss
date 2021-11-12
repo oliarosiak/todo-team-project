@@ -1,11 +1,15 @@
 // цвета для текста
-$primary-white-color: #ffffff;
-$primary-black-color: #000000;
+$primary-text-color: #ffffff;
+$secondary-text-color: #000000;
 $additional-text-color: #907e82;
+
+// акцентные цвета
 $primary-accent-color: #d41443;
 $secondary-accent-color: #ffa5ba;
+
 // цвета для фона
-$background-hero: #ffb8ca;
-$background-color: #e5e5e5;
-$background-color-secondary: #fff5f6;
-$icon-background: #fea5bb;
+$background-hero-color: #ffb8ca;
+$background-main-color: #e5e5e5;
+$background-secondary-color: #fff5f6;
+$background-additional-color: #ffffff;
+$icon-background-color: #fea5bb;

@@ -1,7 +1,7 @@
 body {
   font-family: 'DM Sans', sans-serif;
   @include font(normal, 16px, 400, 28px, 0.04);
-  color: $primary-white-color;
+  color: $primary-text-color;
   background-color: $background-color;
 }
 

@@ -1,24 +1,22 @@
 .about {
+  max-width: 1280px;
   background-color: $background-secondary-color;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  @media (max-width: 768px) {
-    background-image: url(../images/mobile/about-bg_mob.png);
-  }
-
-  // background-image: url(../images/mobile/about-cow_mob.png);
+  // @media (min-width: 1280px) {
+  //   background-size: cover;
+  //   background-position: center;
+  //   background-image: url(../images/desktop/about-bg.png);
+  // }
 }
 
-// @media (max-width: 768px) {
-//   .about--wrap {
-//     height: 133px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     background-color: $background-secondary-color;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-//     background-image: url(../images/mobile/about-bg_mob.png);
+// @media (max-width: 767px) {
+//   background-image: url(../images/mobile/about-bg_mob.png);
+//   @media (min-device-pixel-ratio: 2),
+//     (-webkit-min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//     background-image: url(../images/mobile/about-bg_2x_mob.png);
 //   }
 // }

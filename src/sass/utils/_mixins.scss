@@ -2,11 +2,17 @@
 @mixin font($fs, $fz, $fw, $lh, $ls) {
   font-style: $fs;
   font-size: $fz;
-  font-weight: $fw;
+  font-weight: $fw; 
   line-height: $lh / $fz;
   letter-spacing: $ls;
 }
 
+@mixin font-two($fs, $fz, $fw, $lh) {
+  font-style: $fs;
+  font-size: $fz;
+  font-weight: $fw; 
+  line-height: $lh / $fz;
+}
 // @include font ($fs, $fz, $fw, $lh, $ls);
 
 // mixin для флекса

@@ -1,6 +1,36 @@
+.contacts {
+  background-image: linear-gradient(
+    to bottom,
+    $primary-text-color 10%,
+    $background-secondary-color 10%,
+    $background-secondary-color 100%
+  );
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      $primary-text-color 21%,
+      $background-secondary-color 21%,
+      $background-secondary-color 100%
+    );
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient(
+      to bottom,
+      $primary-text-color 23%,
+      $background-secondary-color 23%,
+      $background-secondary-color 100%
+    );
+  }
+}
+
 .contacts__list {
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-basis: calc(100% / 3 - 20px);
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-basis: calc(100% / 3 - 30px);
   }
 }
 
@@ -10,9 +40,9 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   & hr {
-    margin: 25px 0 25px 0;
+    margin: 25px 0;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     margin: 0 auto;
     width: 220px;
     & + & {
@@ -20,65 +50,81 @@
     }
   }
   @media screen and (min-width: 768px) {
-    flex-basis: calc(100% / 3 - 20px);
+    padding: 50px 31px;
     & + & {
       margin-left: 20px;
     }
     & hr {
-      margin: 30px 0 30px 0;
+      margin: 30px 0;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 51px 44px 62px 43px;
+    & + & {
+      margin-left: 30px;
+    }
+    & hr {
+      margin: 32px 0;
     }
   }
 }
 
-.contacts__title {
+.contacts__subtitle {
+  @include font(normal, 12px, 500, 22px, 0.04em);
   display: inline;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: calc(22 / 12);
-  letter-spacing: 0.04em;
   color: $primary-text-color;
   background: #f0d1a5;
   padding: 0 24px;
   border-radius: 4px;
-  &.contacts__title--foodtruck {
+  &.contacts__subtitle--foodtruck {
     background: #c2e297;
     padding: 0 27px;
   }
   @media screen and (min-width: 768px) {
-    font-size: 16px;
-    line-height: calc(30 / 16);
+    @include font(normal, 16px, 500, 30px, 0.04em);
     padding: 4px 15px;
-    &.contacts__title--foodtruck {
+    &.contacts__subtitle--foodtruck {
       padding: 4px 18px;
     }
   }
 }
 
-.contacts__after-title {
+.contacts__after-subtitle {
   display: block;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: calc(22 / 12);
-  letter-spacing: 0.04em;
+  @include font(normal, 12px, 500, 22px, 0.04em);
   color: $secondary-text-color;
-  &.contacts__after-title--margin {
+  &.contacts__after-subtitle--margin {
     margin-top: 25px;
     margin-bottom: 10px;
   }
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: calc(26 / 14);
+    &.contacts__after-subtitle--margin {
+      margin-top: 30px;
+      margin-bottom: 14px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    &.contacts__after-subtitle--margin {
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
   }
 }
 
 .contacts__descr {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: calc(18 / 12);
+  @include font-two(normal, 12px, 500, 18px);
   color: $additional-text-color;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: calc(23 / 14);
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: calc(29 / 16);
   }
 }
 
@@ -91,58 +137,105 @@
       margin-bottom: 16px;
     }
   }
+  @media screen and (min-width: 1280px) {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .contacts__time-descr {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: calc(22 / 12);
+  @include font-two(normal, 12px, 500, 22px);
   color: $secondary-accent-color;
   @media screen and (min-width: 768px) {
-    font-size: 14px;
-    line-height: calc(26 / 14);
+    @include font-two(normal, 14px, 500, 26px);
+  }
+  @media screen and (min-width: 1280px) {
+    @include font-two(normal, 16px, 500, 30px);
   }
 }
 
 .contacts__link {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: calc(18 / 12);
+  @include font-two(normal, 12px, 500, 18px);
   color: $additional-text-color;
   &:hover,
   &:focus {
     color: $secondary-accent-color;
   }
   @media screen and (min-width: 768px) {
-    font-size: 14px;
-    line-height: calc(26 / 14);
+    @include font-two(normal, 14px, 500, 26px);
+  }
+  @media screen and (min-width: 1280px) {
+    @include font-two(normal, 16px, 500, 29px);
+  }
+}
+
+.contacts__buttons {
+  margin-top: 54px;
+  @media screen and (min-width: 768px) {
+    margin-top: 81px;
+    text-align: center;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 86px;
+    text-align: center;
   }
 }
 
 .contacts__button-first {
   @extend %button-vector;
-  display: block;
-  margin: 0 auto;
-  width: 161px;
   color: $primary-text-color;
   background: $primary-accent-color;
-  margin-top: 54px;
   &:hover,
   &:focus {
     background: #d41342;
+  }
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin: 0 auto;
+    width: 161px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 191px;
+    margin-right: 15px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 198px;
+  }
+}
+
+.contacts__buttons-icon-white {
+  margin-left: 8px;
+  @media screen and (min-width: 768px) {
+    margin-left: 13px;
   }
 }
 
 .contacts__button-second {
   @extend %button-vector;
-  display: block;
-  margin: 0 auto;
-  width: 161px;
   color: $primary-accent-color;
   background: $primary-text-color;
-  margin-top: 10px;
   &:hover,
   &:focus {
-    background: #ECEBEB;
+    background: #ecebeb;
+  }
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin: 0 auto;
+    width: 161px;
+    margin-top: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 174px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 180px;
+  }
+}
+
+.contacts__buttons-icon-red {
+  margin-left: 13px;
+  @media screen and (min-width: 768px) {
+    margin-left: 13px;
   }
 }

@@ -1,0 +1,440 @@
+/*загальні стилі щодо secition/containera*/
+.hero-heade {
+  padding: 6px 0 160px 0;
+  height: 502px;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    padding: 37px 0 28px 0;
+    height: 399px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 38px 0 55px 0;
+    height: 665px;
+  }
+  background-color: $background-hero-color;
+}
+
+.containe {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    width: 700px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1050px;
+  }
+}
+
+/*---------------HEADER------------------*/
+.header {
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+  & .btn {
+    display: none;
+
+    @media screen and(min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 160px;
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 199px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $primary-accent-color;
+  fill: currentColor;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $secondary-accent-color;
+  }
+
+  @media screen and(min-width: 1280px) {
+    position: absolute;
+    top: 0;
+    left: -70px;
+  }
+
+  &__icon {
+    border-radius: 50%;
+    transform: rotate(180deg) rotateY(180deg);
+    background-color: $background-additional-color;
+  }
+
+  &__text {
+    font-family: 'Titan One', cursive;
+    text-transform: uppercase;
+    @include font(normal, 23px, 400, 28px, 0.04em);
+  }
+}
+
+.site-nav {
+  display: none;
+
+  @media screen and(min-width: 1280px) {
+    display: block;
+    margin-left: 240px;
+    z-index: 1;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-family: 'DM Sans', sans-serif;
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.313;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: #c7133e;
+    }
+  }
+}
+
+/*кнопки видалити до 73 рядка- не звертати увагу*/
+.btn {
+  padding: 7px 13px;
+  height: 24px;
+  font-size: 8px;
+  line-height: 1.125;
+  border-radius: 20px;
+  border: none;
+  color: $primary-accent-color;
+  background-color: $background-additional-color;
+
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    background-color: #c7133e;
+    color: honeydew;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.128;
+    padding: 11px 20px;
+  }
+
+  .btn--secondary {
+    padding: 0 23px;
+    color: $primary-text-color;
+    background-color: $primary-accent-color;
+
+    &:hover,
+    &:focus {
+      background-color: #c7133e;
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: 40px;
+      font-size: 14px;
+      line-height: 1.128;
+      padding: 14px 23px;
+    }
+  }
+}
+
+.btn--icon {
+  min-width: 160px;
+  height: 44px;
+  border-radius: 22px;
+  border: none;
+  color: $primary-accent-color;
+  background-color: $background-additional-color;
+
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.312;
+  padding: 0 36px;
+  fill: currentColor;
+}
+
+.btn--icon:hover,
+.btn--icon:focus {
+  background-color: #ecebeb;
+}
+
+/*-------------HERO TITLE-----------------------*/
+.hero__title-main {
+  margin-top: 137px;
+  position: relative;
+  max-width: 220px;
+  z-index: 1;
+
+  @media screen and (min-width: 768px) {
+    max-width: 168px;
+    margin-top: 15px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 277px;
+    margin-top: 99px;
+  }
+}
+
+.hero__title {
+  font-family: 'Titan One', cursive;
+  @include font(normal, 26px, 400, 43.51px, 0.04em);
+  text-transform: uppercase;
+  color: $primary-text-color;
+  margin-bottom: 19px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    line-height: 1.136;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 38px;
+    line-height: 1.157;
+    margin-bottom: 25px;
+  }
+}
+
+.hero__span {
+  font-family: 'Titan One', cursive;
+  font-size: 48px;
+  line-height: 0.958;
+  text-transform: uppercase;
+  color: $primary-accent-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+    line-height: 0.911;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 0.896;
+  }
+}
+
+/*--------------------HERO BUTTON--------------------*/
+/*--------------видалити основні стилі-----------------*/
+.compositions-button {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 66px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 112px;
+  }
+
+  & .btn--accent {
+    display: block;
+    color: $primary-text-color;
+    background-color: $primary-accent-color;
+    min-width: 62px;
+
+    &:hover,
+    &:focus {
+      background-color: #c7133e;
+    }
+
+    @media screen and (min-width: 1280px) {
+      min-width: 104px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+      @media screen and (min-width: 1280px) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+/*--------------------HERO-COUNTER---------------------*/
+.counter {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 71px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 0;
+    top: 134px;
+  }
+}
+
+.counter__number {
+  position: relative;
+  z-index: 1;
+  font-family: 'Titan One', cursive;
+  font-size: 28px;
+  line-height: 1.142;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-accent-color;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 46px;
+    line-height: 1.152;
+    text-align: end;
+  }
+}
+
+.counter__number::before {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: $primary-text-color;
+  z-index: -1;
+
+  @media screen and (min-width: 1280px) {
+    width: 30px;
+    height: 30px;
+    right: -16px;
+    top: -7px;
+  }
+}
+
+.counter__label {
+  font-size: 8px;
+  line-height: 1.25;
+  color: $primary-text-color;
+  margin-bottom: 13px;
+  text-align: center;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
+    line-height: 1.285;
+    text-align: end;
+  }
+}
+
+/*--------------------IMAGE-ICE--------------------------*/
+.elips {
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 83px;
+    left: 14px;
+    width: 346px;
+    height: 344px;
+    border-radius: 50%;
+    background-color: #ffa5ba;
+
+    @media screen and (min-width: 768px) {
+      width: 324px;
+      height: 322px;
+      left: 268px;
+      top: -7px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 538px;
+      height: 538px;
+      left: 348px;
+      top: 20px;
+    }
+  }
+}
+
+.hero-icecreme {
+  position: absolute;
+  top: 86px;
+  left: 105px;
+
+  @media screen and (min-width: 768px) {
+    left: 340px;
+    top: 26px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 467px;
+    top: 70px;
+  }
+}
+
+.hero__milk {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 208px;
+    animation-duration: 1000ms;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: -39px;
+    top: 388px;
+  }
+}
+
+.hero__girl {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 228px;
+    right: 0;
+    animation-duration: 1500ms;
+    animation-delay: 500ms;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 373px;
+    right: 0;
+  }
+}

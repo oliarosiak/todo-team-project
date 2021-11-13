@@ -1,9 +1,9 @@
-.about {
-  max-width: 1280px;
+.about__container {
   background-color: $background-secondary-color;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
+
   // @media (min-width: 1280px) {
   //   background-size: cover;
   //   background-position: center;
@@ -11,6 +11,11 @@
   // }
 }
 
+@media (max-width: 767px) {
+  .about__container {
+    background-image: url(../images/mobile/about-bg_mob.png);
+  }
+}
 // @media (max-width: 767px) {
 //   background-image: url(../images/mobile/about-bg_mob.png);
 //   @media (min-device-pixel-ratio: 2),

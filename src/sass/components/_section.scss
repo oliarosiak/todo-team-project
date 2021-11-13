@@ -12,6 +12,7 @@
     padding-bottom: 56px;
   }
 }
+
 .products {
   background-color: rgb(93, 211, 58);
   //   background-color - для наглядности контуров каждой секции
@@ -26,6 +27,7 @@
     padding-bottom: 119px;
   }
 }
+
 .about {
   background-color: rgb(45, 182, 33);
   //   background-color - для наглядности контуров каждой секции
@@ -40,6 +42,18 @@
     padding-bottom: 39px;
   }
 }
+
+.advantages {
+  padding-top: 75px;
+  background-color: $background-secondary-color;
+  @media screen and (min-width: 768px) {
+    padding-top: 95px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 100px;
+  }
+}
+
 .gallery {
   background-color: rgb(26, 139, 11);
   //   background-color - для наглядности контуров каждой секции
@@ -54,6 +68,7 @@
     padding-bottom: 123px;
   }
 }
+
 .contacts {
   background-color: rgb(3, 124, 3);
   //   background-color - для наглядности контуров каждой секции
@@ -68,6 +83,7 @@
     padding-bottom: 165px;
   }
 }
+
 .footer {
   background-color: rgb(8, 68, 13);
   //   background-color - для наглядности контуров каждой секции

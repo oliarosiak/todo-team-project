@@ -1,0 +1,59 @@
+.products__title {
+  margin-bottom: 144px;
+
+  font-family: 'Titan One', sans-serif;
+  @include font($fs: normal, $fz: 34px, $fw: 400, $lh: 39px, $ls: 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-accent-color;
+}
+
+.products__pretitle {
+  margin-bottom: 15px;
+
+  font-family: 'Titan One', sans-serif;
+  @include font($fs: normal, $fz: 18px, $fw: 400, $lh: 21px, $ls: 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+  color: $secondary-accent-color;
+}
+
+.products__item {
+  background-color: $secondary-accent-color;
+  border-radius: 24px;
+
+  padding: 0 40px 40px 40px;
+  margin-bottom: 130px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.products__item--title {
+  font-family: 'Titan One', sans-serif;
+  @include font($fs: normal, $fz: 20px, $fw: 400, $lh: 23px, $ls: 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-bottom: 66px;
+}
+
+.products__item--description {
+  @include font($fs: normal, $fz: 14px, $fw: 700, $lh: 21px, $ls: 0.04em);
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+}
+
+.products__item--button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $background-additional-color;
+
+  margin-left: auto;
+  margin-right: auto;
+}

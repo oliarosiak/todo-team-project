@@ -3,19 +3,22 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-image: url(../images/mobile/about-cow_mob.png);
-  //   background-image: url(../images/mobile/about-cow_mob.png);
-}
-
-@media (max-width: 768px) {
-  .about--wrap {
-    height: 133px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: $background-secondary-color;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  @media (max-width: 768px) {
     background-image: url(../images/mobile/about-bg_mob.png);
   }
+
+  // background-image: url(../images/mobile/about-cow_mob.png);
 }
+
+// @media (max-width: 768px) {
+//   .about--wrap {
+//     height: 133px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     background-color: $background-secondary-color;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     background-image: url(../images/mobile/about-bg_mob.png);
+//   }
+// }

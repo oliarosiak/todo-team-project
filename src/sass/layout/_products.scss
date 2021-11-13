@@ -1,4 +1,4 @@
-.products-title {
+.products__title {
   margin-bottom: 144px;
 
   font-family: 'Titan One', sans-serif;
@@ -8,7 +8,7 @@
   color: $primary-accent-color;
 }
 
-.products-title__description {
+.products__pretitle {
   margin-bottom: 15px;
 
   font-family: 'Titan One', sans-serif;
@@ -18,11 +18,7 @@
   color: $secondary-accent-color;
 }
 
-.products-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+.products__item {
   background-color: $secondary-accent-color;
   border-radius: 24px;
 
@@ -34,7 +30,7 @@
   }
 }
 
-.products-item__title {
+.products__item--title {
   font-family: 'Titan One', sans-serif;
   @include font($fs: normal, $fz: 20px, $fw: 400, $lh: 23px, $ls: 0.04em);
   text-align: center;
@@ -43,7 +39,7 @@
   margin-bottom: 66px;
 }
 
-.products-item__description {
+.products__item--description {
   @include font($fs: normal, $fz: 14px, $fw: 700, $lh: 21px, $ls: 0.04em);
   text-align: center;
   text-transform: uppercase;
@@ -51,9 +47,13 @@
   margin-bottom: 30px;
 }
 
-.products-item__button {
+.products__item--button {
+  display: block;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: $background-additional-color;
+
+  margin-left: auto;
+  margin-right: auto;
 }

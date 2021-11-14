@@ -1,27 +1,97 @@
-.about__container {
+.about {
+  // position: relative;
   background-color: $background-secondary-color;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  // @media (min-width: 1280px) {
-  //   background-size: cover;
-  //   background-position: center;
-  //   background-image: url(../images/desktop/about-bg.png);
-  // }
 }
+.about--background {
+  margin-left: auto;
+  margin-right: auto;
 
-@media (max-width: 767px) {
-  .about__container {
-    background-image: url(../images/mobile/about-bg_mob.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+    background-image: url(../images/desktop/about-bg.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/desktop/about-bg_2x.png);
+    }
   }
 }
-// @media (max-width: 767px) {
-//   background-image: url(../images/mobile/about-bg_mob.png);
-//   @media (min-device-pixel-ratio: 2),
-//     (-webkit-min-device-pixel-ratio: 2),
-//     (min-resolution: 192dpi),
-//     (min-resolution: 2dppx) {
-//     background-image: url(../images/mobile/about-bg_2x_mob.png);
-//   }
-// }
+@media (max-width: 767px) {
+  .about--background {
+    position: absolute;
+
+    background-image: url(../images/mobile/about-bg_mob.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/mobile/about-bg_2x_mob.png);
+    }
+  }
+}
+.about__subtitle {
+  font-family: Titan One;
+  color: $secondary-accent-color;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.about__title {
+  font-family: Titan One;
+  color: $primary-accent-color;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+.about__paragraph {
+  color: $secondary-text-color;
+  margin-bottom: 30px;
+  &::before {
+    content: '';
+    display: block;
+    width: 280px;
+    height: 279px;
+    margin-bottom: 46px;
+    background-image: url(../images/mobile/about-cow_mob.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/mobile/about-cow_2x_mob.png);
+    }
+    @media (min-width: 768px) {
+      width: 340px;
+      height: 339px;
+      background-image: url(../images/tablet/about-cow_tablet.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/tablet/about-cow_2x_tablet.png);
+      }
+    }
+    @media (min-width: 1280px) {
+      width: 516px;
+      height: 516px;
+      background-image: url(../images/desktop/about-cow.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/desktop/about-cow_2x.png);
+      }
+    }
+  }
+}
+.about__description {
+  color: $additional-text-color;
+  margin-bottom: 32px;
+}
+.about__specification {
+  color: $additional-text-color;
+  margin-bottom: 17px;
+}
+.about__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 176px;
+  height: 44px;
+  background-color: $primary-text-color;
+  color: $primary-accent-color;
+
+  border-radius: 22px;
+}
+.about__icon {
+  margin-left: 13px;
+  background-color: yellow;
+}

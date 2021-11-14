@@ -69,6 +69,12 @@
     padding: 163px 44px 50px 50px;
     margin: 0 15px;
   }
+
+  transition: transform 3000ms;
+}
+
+.products__item:hover {
+  transform: rotateY(180deg);
 }
 
 .products__item--icecream {
@@ -97,6 +103,33 @@
     margin-bottom: 70px;
 
     @include font($fs: normal, $fz: 30px, $fw: 400, $lh: 34px, $ls: 0.04em);
+  }
+}
+
+.products__caption::after {
+  content: '';
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+
+  display: inline-block;
+
+  width: 26px;
+  height: 6px;
+
+  background-image: url('../images/desktop/group.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin-top: 32px;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/desktop/group@2x.png');
   }
 }
 
@@ -297,8 +330,20 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: $background-additional-color;
+  background-size: contain;
+
+  background-image: url('../images/desktop/arrow-right.png');
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/desktop/arrow-right@2x.png');
+  }
 
   margin-left: auto;
   margin-right: auto;
+}
+
+.products__button:hover + .products__item {
+  transform: rotateY(180deg);
 }

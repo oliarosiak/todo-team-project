@@ -153,9 +153,7 @@
   }
 }
 .about__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center($type: flex);
   width: 176px;
   height: 44px;
   background-color: $primary-text-color;

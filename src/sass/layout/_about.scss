@@ -31,6 +31,7 @@
 
 .about__subtitle {
   font-family: Titan One;
+  @include font(normal, 18px, 400, 21px, normal);
   color: $secondary-accent-color;
   text-align: center;
   text-transform: uppercase;
@@ -38,6 +39,7 @@
 }
 .about__title {
   font-family: Titan One;
+  @include font(normal, 34px, 400, 39px, 0.04em);
   color: $primary-accent-color;
   text-align: center;
   text-transform: uppercase;
@@ -45,6 +47,7 @@
 }
 .about__paragraph {
   color: $secondary-text-color;
+  @include font(normal, 12px, 500, 19px, normal);
   margin-bottom: 30px;
   &::before {
     content: '';
@@ -52,6 +55,9 @@
     width: 280px;
     height: 279px;
     margin-bottom: 46px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     background-image: url(../images/mobile/about-cow_mob.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/mobile/about-cow_2x_mob.png);

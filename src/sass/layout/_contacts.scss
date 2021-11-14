@@ -14,12 +14,16 @@
     );
   }
   @media screen and (min-width: 1280px) {
-    background-image: linear-gradient(
-      to bottom,
-      $primary-text-color 23%,
-      $background-secondary-color 23%,
-      $background-secondary-color 100%
-    );
+    background-image: url(../images/desktop/contacts-bg.png),
+      linear-gradient(
+        to bottom,
+        $primary-text-color 23%,
+        $background-secondary-color 23%,
+        $background-secondary-color 100%
+      );
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 37%;
   }
 }
 
@@ -116,13 +120,13 @@
 }
 
 .contacts__descr {
-  @include font-two(normal, 12px, 500, 18px);
+  @include font(normal, 12px, 500, 18px, normal);
   color: $additional-text-color;
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: calc(23 / 14);
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: calc(29 / 16);
   }
@@ -145,28 +149,28 @@
 }
 
 .contacts__time-descr {
-  @include font-two(normal, 12px, 500, 22px);
+  @include font(normal, 12px, 500, 22px, normal);
   color: $secondary-accent-color;
   @media screen and (min-width: 768px) {
-    @include font-two(normal, 14px, 500, 26px);
+    @include font(normal, 14px, 500, 26px, normal);
   }
   @media screen and (min-width: 1280px) {
-    @include font-two(normal, 16px, 500, 30px);
+    @include font(normal, 16px, 500, 30px, normal);
   }
 }
 
 .contacts__link {
-  @include font-two(normal, 12px, 500, 18px);
+  @include font(normal, 12px, 500, 18px, normal);
   color: $additional-text-color;
   &:hover,
   &:focus {
     color: $secondary-accent-color;
   }
   @media screen and (min-width: 768px) {
-    @include font-two(normal, 14px, 500, 26px);
+    @include font(normal, 14px, 500, 26px, normal);
   }
   @media screen and (min-width: 1280px) {
-    @include font-two(normal, 16px, 500, 29px);
+    @include font(normal, 16px, 500, 29px, normal);
   }
 }
 
@@ -188,7 +192,7 @@
   background: $primary-accent-color;
   &:hover,
   &:focus {
-    background: #d41342;
+    background: #c7133e;
   }
   @media screen and (max-width: 767px) {
     display: block;

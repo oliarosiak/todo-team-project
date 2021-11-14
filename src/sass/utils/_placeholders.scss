@@ -4,22 +4,13 @@
   font-size: 16px;
   line-height: calc(21 / 16);
   height: 44px;
-  // color: ;
-  // background-color: ;
   border-radius: 22px;
   border: none;
   cursor: pointer;
   transition: color 300ms linear, background-color 300ms linear;
-  // &:hover,
-  // &:focus {
-  //   background-color:;
-  // }
   & .icon-pink {
     margin-left: 27px;
   }
-  //   & .icon-white {
-  //   margin-left: 27px;
-  // }
 }
 
 %button {
@@ -31,11 +22,6 @@
   border: none;
   cursor: pointer;
   transition: color 300ms linear, background-color 300ms linear;
-  // &:hover,
-  // &:focus {
-  //   background-color: ;
-  // }
-
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: calc(18 / 14);

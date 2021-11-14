@@ -4,6 +4,7 @@
 
 .reviews__container {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .reviews__slider {
@@ -107,6 +108,12 @@
   font-family: inherit;
   @include font(normal, 14px, 500, 26px, 0.04em);
   color: $secondary-text-color;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 767px) {
+    margin-bottom: 35px;
+  }
+
   &::before {
     content: '';
     display: block;
@@ -123,19 +130,46 @@
     }
   }
 
-  &::after {
-    content: '';
-    display: block;
-    width: 72px;
-    height: 12px;
-    margin: 30px auto 0;
-    background-image: url('../images/desktop/marker-home.png');
-    background-size: 72px 12px;
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   width: 72px;
+  //   height: 12px;
+  //   margin: 30px auto 0;
+  //   background-image: url('../images/desktop/marker-home.png');
+  //   background-size: 72px 12px;
+
+  //   @media screen and (min-device-pixel-ratio: 2),
+  //     screen and (min-resolution: 192dpi),
+  //     screen and (min-resolution: 2dppx) {
+  //     background-image: url('../images/desktop/marker-home@2x.png');
+  //   }
+  // }
+}
+
+.slick-dots li button:before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active {
+  & button::before {
+    width: 13px;
+    height: 13px;
+    border-radius: 0;
+    background-image: url('../images/desktop/home-pic.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url('../images/desktop/marker-home@2x.png');
+      background-image: url('../images/desktop/home-pic@2x.png');
     }
   }
 }

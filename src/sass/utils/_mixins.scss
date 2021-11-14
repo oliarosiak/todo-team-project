@@ -9,13 +9,6 @@
 
 // @include font($fs, $fz, $fw, $lh, $ls);
 
-@mixin font-two($fs, $fz, $fw, $lh) {
-  font-style: $fs;
-  font-size: $fz;
-  font-weight: $fw;
-  line-height: $lh / $fz;
-}
-
 // mixin для флекса
 @mixin flex-center($type: flex) {
   display: $type;

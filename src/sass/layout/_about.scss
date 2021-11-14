@@ -1,14 +1,11 @@
-.about {
-  // position: relative;
-  background-color: $background-secondary-color;
-}
 .about--background {
   margin-left: auto;
   margin-right: auto;
-
+  background-color: $background-secondary-color;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+
+  background-position: right 0 bottom 110px;
   @media (min-width: 1280px) {
     max-width: 1280px;
     background-image: url(../images/desktop/about-bg.png);
@@ -19,14 +16,19 @@
 }
 @media (max-width: 767px) {
   .about--background {
-    position: absolute;
-
     background-image: url(../images/mobile/about-bg_mob.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/mobile/about-bg_2x_mob.png);
     }
   }
 }
+.about--wrap {
+  @media (max-width: 767px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .about__subtitle {
   font-family: Titan One;
   color: $secondary-accent-color;

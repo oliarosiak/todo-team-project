@@ -8,6 +8,7 @@
   background-position: right 0 bottom 110px;
   @media (min-width: 1280px) {
     max-width: 1280px;
+    background-position: right 0 bottom -20px;
     background-image: url(../images/desktop/about-bg.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/desktop/about-bg_2x.png);
@@ -65,26 +66,30 @@
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
-
     padding-left: 357px;
   }
   @media (min-width: 1280px) {
-    padding-left: 702px;
+    padding-left: 590px;
   }
 }
 .about__paragraph {
   position: relative;
   display: flex;
+  align-items: center;
+  color: $secondary-text-color;
+  @include font(normal, 12px, 500, 19px, normal);
+  margin-bottom: 30px;
   @media (max-width: 767px) {
     flex-direction: column;
   }
   @media (min-width: 768px) {
     @include font(normal, 14px, 500, 25px, normal);
   }
-  align-items: center;
-  color: $secondary-text-color;
-  @include font(normal, 12px, 500, 19px, normal);
-  margin-bottom: 30px;
+  @media (min-width: 1280px) {
+    @include font(normal, 16px, 500, 28px, 0.04em);
+    margin-bottom: 35px;
+  }
+
   &::before {
     content: '';
 
@@ -102,7 +107,7 @@
       position: absolute;
       width: 100%;
       height: 339px;
-      top: -50px;
+      top: -53px;
       right: 105%;
       background-image: url(../images/tablet/about-cow_tablet.png);
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -110,9 +115,10 @@
       }
     }
     @media (min-width: 1280px) {
-      width: 100%;
+      width: 516px;
       height: 516px;
-      right: 110%;
+      right: 115%;
+      top: -50px;
       background-image: url(../images/desktop/about-cow.png);
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url(../images/desktop/about-cow_2x.png);
@@ -128,6 +134,10 @@
     @include font(normal, 14px, 500, 25px, 0.04em);
     margin-bottom: 13px;
   }
+  @media (min-width: 1280px) {
+    @include font(normal, 14px, 500, 27px, 0.04em);
+    margin-bottom: 30px;
+  }
 }
 .about__specification {
   color: $additional-text-color;
@@ -136,6 +146,10 @@
   @media (min-width: 768px) {
     @include font(normal, 14px, 500, 25px, 0.04em);
     margin-bottom: 62px;
+  }
+  @media (min-width: 1280px) {
+    @include font(normal, 14px, 500, 27px, 0.04em);
+    margin-bottom: 45px;
   }
 }
 .about__button {
@@ -147,8 +161,10 @@
   background-color: $primary-text-color;
   color: $primary-accent-color;
   @include font(normal, 14px, 700, 18px, normal);
-
   border-radius: 22px;
+  @media (min-width: 1280px) {
+    @include font(normal, 16px, 700, 21px, normal);
+  }
 }
 .about__icon {
   margin-left: 13px;

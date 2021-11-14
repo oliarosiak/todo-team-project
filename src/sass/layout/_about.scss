@@ -152,7 +152,7 @@
     margin-bottom: 45px;
   }
 }
-.about__button {
+.button-about {
   @include flex-center($type: flex);
   width: 176px;
   height: 44px;
@@ -164,7 +164,7 @@
     @include font(normal, 16px, 700, 21px, normal);
   }
 }
-.about__icon {
+.button-about__icon {
   margin-left: 13px;
   background-color: yellow;
 }

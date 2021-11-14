@@ -69,8 +69,8 @@
   }
 }
 .footer {
-  background-color: rgb(8, 68, 13);
-  //   background-color - для наглядности контуров каждой секции
+  background-color: $background-secondary-color;
+  position: relative;
   padding-bottom: 25px;
   @media (min-width: 768px) {
     padding-bottom: 18px;

@@ -114,7 +114,7 @@
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background-color: #c7133e;
+    background-color: $event-decor-color;
   }
   &::before,
   &::after {

@@ -109,6 +109,27 @@
   }
 }
 
+/*-------------------MOBILE BUTTON-------------------*/
+.mobile-menu {
+  z-index: 2;
+  padding: 0;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  color: $primary-accent-color;
+  background-color: transparent;
+  border-style: unset;
+  cursor: pointer;
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
 /*кнопки */
 .button-buy {
   @extend %button-vector;
@@ -118,8 +139,8 @@
   display: none;
   align-items: baseline;
   justify-content: center;
-  padding: 12px 37px;
-  margin-left: 30px;
+  padding: 12px 36px;
+  margin-left: 25px;
   color: $primary-accent-color;
   border-style: unset;
   background-color: #ffffff;
@@ -138,6 +159,7 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    width: 160px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -213,7 +235,7 @@
   }
 }
 
-.button__link {
+.compositions-button__link {
   display: inline-flex;
   padding: 7px 13px;
   font-family: 'DM Sans';

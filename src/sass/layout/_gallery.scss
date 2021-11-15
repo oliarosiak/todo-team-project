@@ -1,17 +1,22 @@
 .gallery {
-  @media screen and(max-width: 767px) {
-    display: none;
-  }
   background: linear-gradient(to bottom, #fff5f6 45%, #ffffff 45%, #ffffff 100%);
 }
 .grid {
   display: grid;
-  grid-column-gap: 6px;
-  grid-row-gap: 6px;
-  height: 264px;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and(max-width:767px) {
+    height: 122px;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 264px;
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+  }
   @media screen and (min-width: 1280px) {
-    justify-items: center;
-    align-items: center;
     height: 430px;
   }
 }
@@ -19,7 +24,13 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  border-radius: 22px;
+  border-radius: 2px;
+  @media screen and(min-width: 768px) {
+    border-radius: 10px;
+  }
+  @media screen and(min-width: 1280px) {
+    border-radius: 22px;
+  }
   &:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 5px 1px rgba(212, 20, 67, 0.2);

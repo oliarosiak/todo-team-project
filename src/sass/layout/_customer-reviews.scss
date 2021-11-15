@@ -162,6 +162,10 @@ button.slick-next {
   right: 0;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
 .slick-dots li button:before {
   content: '';
   width: 12px;

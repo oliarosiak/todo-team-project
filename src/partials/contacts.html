@@ -93,18 +93,34 @@
       </li>
     </ul>
     <div class="contacts__buttons">
-      <button type="button" class="contacts__button-first">
+      <button type="button" class="contacts__button-first" locations-open>
         Our Locations
         <svg class="contacts__buttons-icon-white" width="6" height="10">
           <use href="./images/sprite.svg#icon-right-white"></use>
         </svg>
       </button>
-      <button type="button" class="contacts__button-second">
+      <button type="button" class="contacts__button-second" franchise-open>
         Franchise
         <svg class="contacts__buttons-icon-red" width="6" height="10">
           <use href="./images/sprite.svg#icon-right-red"></use>
         </svg>
       </button>
+    </div>
+
+    <div class="backdrop is-hidden" locations-modal>
+      <div class="contacts__modal">
+        <button type="button" class="btn-close" locations-close>
+          <span class="contacts__close">X</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="backdrop is-hidden" franchise-modal>
+      <div class="contacts__modal">
+        <button type="button" class="btn-close" franchise-close>
+          <span class="contacts__close">X</span>
+        </button>
+      </div>
     </div>
   </div>
 </section>

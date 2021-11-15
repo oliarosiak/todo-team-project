@@ -1,4 +1,5 @@
 .contacts {
+  position: relative;
   background-image: linear-gradient(
     to bottom,
     $primary-text-color 10%,
@@ -162,6 +163,7 @@
 .contacts__link {
   @include font(normal, 12px, 500, 18px, normal);
   color: $additional-text-color;
+  transition: color 300ms linear;
   &:hover,
   &:focus {
     color: $secondary-accent-color;
@@ -241,5 +243,20 @@
   margin-left: 13px;
   @media screen and (min-width: 768px) {
     margin-left: 13px;
+  }
+}
+
+.contacts__modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+
+  @media screen and (min-width: 768px) {
+    top: 25%;
+    left: 25%;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 15px;
   }
 }

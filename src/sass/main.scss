@@ -14,6 +14,8 @@
 // Подключение файлов стилей для переиспользованных элементов
 @import './components/section';
 @import './components/container';
+@import './components/mobile-menu';
+@import './components/modal-window';
 
 // Подключение файлов стилей для основных компонентов страницы
 @import './layout/hero-header';
@@ -24,5 +26,3 @@
 @import './layout/customer-reviews';
 @import './layout/contacts';
 @import './layout/footer';
-@import './layout/mobile-menu';
-

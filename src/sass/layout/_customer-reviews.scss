@@ -24,8 +24,8 @@
   background-color: #fafafa;
   background-image: repeating-linear-gradient(
     to bottom,
-    #e1e1e1,
-    #e1e1e1 1px,
+    $line-decor-color,
+    $line-decor-color 1px,
     transparent 1px,
     transparent 30px
   );
@@ -54,7 +54,7 @@
 
   @media screen and (min-width: 767px) and (max-width: 1279px) {
     background-color: transparent;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
     width: 620px;
     height: 164px;
     background-size: 524px 63px;
@@ -104,6 +104,31 @@
   }
 }
 
+.reviews_decor {
+  position: relative;
+  margin: 0 auto 15px;
+  &,
+  &::before,
+  &::after {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #c7133e;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+  &::before {
+    right: 10px;
+  }
+  &::after {
+    right: -10px;
+  }
+}
+
 .reviews__footer {
   font-family: inherit;
   @include font(normal, 14px, 500, 26px, 0.04em);
@@ -114,21 +139,21 @@
     margin-bottom: 35px;
   }
 
-  &::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 4px;
-    margin: 0 auto 18px;
-    background-image: url('../images/desktop/red-points.png');
-    background-size: 32px 4px;
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   width: 32px;
+  //   height: 4px;
+  //   margin: 0 auto 18px;
+  //   background-image: url('../images/desktop/red-points.png');
+  //   background-size: 32px 4px;
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url('../images/desktop/red-points@2x.png');
-    }
-  }
+  //   @media screen and (min-device-pixel-ratio: 2),
+  //     screen and (min-resolution: 192dpi),
+  //     screen and (min-resolution: 2dppx) {
+  //     background-image: url('../images/desktop/red-points@2x.png');
+  //   }
+  // }
 
   // &::after {
   //   content: '';

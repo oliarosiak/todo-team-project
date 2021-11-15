@@ -9,7 +9,10 @@ $secondary-accent-color: #ffa5ba;
 
 // цвета для фона
 $background-hero-color: #ffb8ca;
-$background-main-color: #e5e5e5;
 $background-secondary-color: #fff5f6;
 $background-additional-color: #ffffff;
 $icon-background-color: #fea5bb;
+
+// переменная для анимации
+$transition: 300ms cubic-bezier(0.42, 0.97, 0.52, 1.49);
+// transition: color  $transition;

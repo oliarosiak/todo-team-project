@@ -1,6 +1,4 @@
 .hero-header {
-  background-color: rgb(138, 245, 89);
-  //   background-color - для наглядности контуров каждой секции
   padding-top: 6px;
   padding-bottom: 160px;
   @media (min-width: 768px) {
@@ -14,7 +12,6 @@
 }
 .products {
   background-color: $background-additional-color;
-  //   background-color - для наглядности контуров каждой секции
   padding-top: 121px;
   padding-bottom: 98px;
   @media (min-width: 768px) {
@@ -27,8 +24,6 @@
   }
 }
 .about {
-  background-color: rgb(45, 182, 33);
-  //   background-color - для наглядности контуров каждой секции
   padding-top: 125px;
   padding-bottom: 39px;
   @media (min-width: 768px) {
@@ -41,8 +36,6 @@
   }
 }
 .gallery {
-  background-color: rgb(26, 139, 11);
-  //   background-color - для наглядности контуров каждой секции
   padding-top: 97px;
   padding-bottom: 80px;
   @media (min-width: 768px) {
@@ -55,8 +48,6 @@
   }
 }
 .contacts {
-  background-color: rgb(3, 124, 3);
-  //   background-color - для наглядности контуров каждой секции
   padding-top: 86px;
   padding-bottom: 113px;
   @media (min-width: 768px) {

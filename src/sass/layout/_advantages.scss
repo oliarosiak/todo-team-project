@@ -58,9 +58,7 @@
         (min-resolution: 2dppx) {
             background-image: url('../images/mobile/advantages1_2x_mob.png');
         }
-    }
-    @media screen and (min-width: 768px) {
-        &::before {
+        @media screen and (min-width: 768px) {
             background-image: url('../images/tablet/advantages1_tablet.png');
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
@@ -68,9 +66,7 @@
                 background-image: url('../images/tablet/advantages1_2x_tablet.png');
             }
         }
-    }
-    @media screen and (min-width: 1280px) {
-        &::before {
+        @media screen and (min-width: 1280px) {
             background-image: url('../images/desktop/advantages1.png');
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
@@ -91,9 +87,7 @@
         (min-resolution: 2dppx) {
             background-image: url('../images/mobile/advantages2_2x_mob.png');
         }
-    }
-    @media screen and (min-width: 768px) {
-        &::before {
+        @media screen and (min-width: 768px) {
             background-image: url('../images/tablet/advantages2_tablet.png');
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
@@ -101,9 +95,7 @@
                 background-image: url('../images/tablet/advantages2_2x_tablet.png');
             }
         }
-    }
-    @media screen and (min-width: 1280px) {
-        &::before {
+        @media screen and (min-width: 1280px) {
             background-image: url('../images/desktop/advantages2.png');
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
@@ -123,9 +115,7 @@
         (min-resolution: 2dppx) {
             background-image: url('../images/mobile/advantages3_2x_mob.png');
         }
-    }
-    @media screen and (min-width: 768px) {
-        &::before {
+        @media screen and (min-width: 768px) {
             background-image: url('../images/tablet/advantages3_tablet.png');
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
@@ -133,9 +123,7 @@
                 background-image: url('../images/tablet/advantages3_2x_tablet.png');
             }
         }
-    }
-    @media screen and (min-width: 1280px) {
-        &::before {
+        @media screen and (min-width: 1280px) {
             background-image: url('../images/desktop/advantages3.png');
             @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),

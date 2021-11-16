@@ -27,17 +27,89 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- <button class="button-menu" type="button">
+                <svg class="button-menu__icon" width="20" height="12"> -->
             <button class="button-mobile" type="button">
                 <svg class="button-mobile__icon" width="20" height="12">
+
                     <use href="./images/sprite.svg#icon-burger-menu"></use>
                 </svg>
             </button>
-            <button class="button-buy" type="button">
+            <button class="button-buy" type="button" data-modal-open>
                     Buy now
                     <svg class="button-buy__icon" width="10" height="10">
                         <use href="./images/sprite.svg#icon-right-red"></use>
                     </svg>
             </button>
+
+            <!--Modal-order-->
+            <div class="backdrop is-hidden" data-modal>
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:1;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="square" style="--i:5;"></div>
+                <div class="square" style="--i:6;"></div>
+                <div class="modal__form">
+                    <button class="modal__close-btn" type="button" data-modal-close>
+                        <svg width="20" height="20" class="modal__icon-close">
+                            <use href="./images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <form action="" class="form__sale">
+                        <p class="form__title">Fill out the form and we will call you back.</p>
+            
+                        <!-- Name INPUT -->
+                        <div class="form__field">
+                            <label for="name" class="form__label">Name</label>
+                            <input class="form__input" type="text" name="name" id="name" placeholder="Your name..."/>
+                            <svg class="form__icon" width="15" height="12">
+                                <use href="./images/sprite.svg#icon-person"></use>
+                            </svg>
+                        </div>
+            
+                        <!-- PHONE INPUT -->
+                        <div class="form__field">
+                            <label for="tel" class="form__label">Number</label>
+                            <input class="form__input" type="tel" name="tel" id="tel" placeholder="Your phone number..."/>
+                            <svg class="form__icon" width="15" height="12">
+                                <use href="./images/sprite.svg#icon-phone"></use>
+                            </svg>
+                        </div>
+            
+                        <!-- EMAIL INPUT -->
+                        <div class="form__field">
+                            <label for="email" class="form__label">Email</label>
+                            <input class="form__input" type="email" name="email" id="email" placeholder="Your phone email..."/>
+                            <svg class="form__icon" width="15" height="12">
+                                <use href="./images/sprite.svg#icon-email"></use>
+                            </svg>
+                        </div>
+            
+                        <!-- COMMENTS INPUT -->
+                        <div class="form__field">
+                            <label for="coments" class="form__label">Comment</label>
+                            <textarea name="coments" id="coments" cols="30" rows="10" placeholder="Your sweetest comment"
+                                class="form__textarea"></textarea>
+                        </div>
+            
+                        <!-- AGREEMENT -->
+                        <label for="checkbox" class="form__checkbox-label">
+                            <input type="checkbox" name="checkbox" id="checkbox" class="checkbox" />
+                            <span class="checkbox__icon"></span>
+                            I agree to the newsletter and accept
+                            <a href="" class="checkbox__link">Terms of an agreement</a>
+                        </label>
+                        <button type="submit" class="button-buy button-send">Send message
+                            <svg class="button-buy__icon button-send__icon" width="10" height="10">
+                                <use href="./images/sprite.svg#icon-right-white"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
             
 
 
@@ -61,7 +133,6 @@
             </li>
         </ul>
     </div>
-  
 
     <p class="wrap-milk__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
     <button class="button-slider">
@@ -70,31 +141,7 @@
         </svg>
     </button>
     
-<!--  можливий слайдер    <div class="hero-milk-slider">
-        <p class="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        </p>
-    
-        <input type="checkbox" id="button" class="hero__check visually-hidden" aria-hidden="true">
-        <label class="hero__button" for="button">
-            <svg class="hero__arrow" width="9" height="8">
-                <use href=""></use>
-            </svg>
-    
-            <svg class="hero__close" width="9" height="8">
-                <use href=""></use>
-            </svg>
-        </label>
-    
-        
-    
-        <div class="hero__overlay--second">
-            <p class="hero__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            </p>
-        </div>
-    
-    </div>-->
+
     <div class="counter">
         <ul class="counter__list">
             <li class="counter__item">

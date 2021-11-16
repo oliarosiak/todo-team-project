@@ -11,7 +11,7 @@
 
   transform: translateX(220%);
   opacity: 0;
-  transition: transform 750ms linear, opacity 750ms linear;
+  transition: transform 300ms linear, opacity 300ms linear;
 
   @media screen and (min-width: 768px) {
     width: 260px;
@@ -21,8 +21,16 @@
     filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
     transform: translateX(0);
     opacity: 1;
-    transition: transform 750ms linear, opacity 750ms linear;
+    transition: transform 300ms linear, opacity 300ms linear;
   }
+}
+.button-menu.js-close-menu {
+  display: block;
+  position: absolute;
+  top: 23px;
+  right: 28px;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .btn-light {
@@ -35,7 +43,7 @@
   cursor: pointer;
   color: $primary-accent-color;
 
-  transition: background-color 250ms linear;
+  transition: background-color 300ms linear;
 
   &:hover,
   &:focus {
@@ -45,9 +53,9 @@
 
 .mobile-menu__button {
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 32px;
-  width: 210px;
+  margin-top: 60px;
+  margin-bottom: 19px;
+  width: 209px;
   margin-right: auto;
   margin-left: auto;
   padding: 13px 0;
@@ -59,7 +67,7 @@
 
   @media screen and (min-width: 768px) {
     width: 186px;
-    margin-top: 120px;
+    margin-top: 60px;
   }
 }
 .mobile-menu__icon {

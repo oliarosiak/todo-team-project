@@ -110,8 +110,12 @@
 }
 
 /*-------------------MOBILE BUTTON-------------------*/
-.button-menu {
-  z-index: 3;
+
+// .button-menu {
+//   z-index: 3;
+
+.button-mobile {
+  z-index: 2;
   padding: 0;
   margin-left: auto;
   width: 30px;
@@ -119,6 +123,7 @@
   color: $primary-accent-color;
   background-color: transparent;
   border-style: unset;
+
   cursor: pointer;
 
   &__icon {
@@ -133,6 +138,7 @@
 /*кнопки */
 .button-buy {
   @extend %button-vector;
+
   display: flex;
   align-items: center;
   z-index: 1;

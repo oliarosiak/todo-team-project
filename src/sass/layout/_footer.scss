@@ -20,6 +20,7 @@
   .footer__title {
     width: 474px;
     margin-bottom: 15px;
+    @include font(normal, 30px, 400, 34px, 0.04em);
   }
 }
 
@@ -44,6 +45,8 @@
 @media (min-width: 1280px) {
   .footer__sub-title {
     width: 474px;
+    font-size: 58px;
+    line-height: 66px;
   }
 }
 
@@ -156,7 +159,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__copyright {
     width: 150px;
   }

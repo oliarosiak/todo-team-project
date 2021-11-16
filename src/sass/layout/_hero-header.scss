@@ -56,7 +56,7 @@
   justify-content: space-between;
   color: $primary-accent-color;
   fill: currentColor;
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color $transition;
 
   &:hover,
   &:focus {
@@ -92,8 +92,7 @@
   }
 
   &__list {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
@@ -112,7 +111,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.313;
-    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color $transition;
 
     &:hover,
     &:focus {
@@ -150,20 +149,17 @@
 /*кнопки */
 .button-buy {
   @extend %button-vector;
-
-  display: flex;
-  align-items: center;
+  @include flex-center;
   z-index: 1;
   display: none;
   align-items: baseline;
-  justify-content: center;
   padding: 12px 36px;
   margin-left: 25px;
   color: $primary-accent-color;
   border-style: unset;
   background-color: #ffffff;
   border-radius: 22px;
-  transition: background-color 250ms linear;
+  transition: background-color $transition;
 
   &__icon {
     margin-left: 12px;
@@ -223,7 +219,7 @@
   }
 }
 
-.backdrop .square {
+.order-backdrop .square {
   position: absolute;
   backdrop-filter: blur(5px);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
@@ -483,31 +479,27 @@
     border: 2px solid $primary-accent-color;
     background-color: $primary-accent-color;
     background-image: url(../images/check.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-size-repeat-position();
   }
-}
-
-.checkbox__icon {
-  position: relative;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  border: 2px solid $secondary-text-color;
-  border-radius: 2px;
-  background-size: contain;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.checkbox__link {
-  margin-left: 5px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-decoration-line: underline;
-  color: $primary-accent-color;
+  &__icon {
+    position: relative;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    border: 2px solid $secondary-text-color;
+    border-radius: 2px;
+    background-size: contain;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+  &__link {
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: $primary-accent-color;
+  }
 }
 
 .form__btn-submit {
@@ -537,10 +529,7 @@
 
 .hero__title {
   font-family: 'Titan One', cursive;
-  font-size: 26px;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 1.15;
+  @include font(cursive, 26px, 400, 30px, 0.04em);
   text-transform: uppercase;
   color: $primary-text-color;
   margin-bottom: 19px;
@@ -594,7 +583,7 @@
   font-size: 8px;
   line-height: 1.25;
   border-radius: 20px;
-  transition: background-color 250ms linear;
+  transition: background-color $transition;
 
   @media screen and (min-width: 1280px) {
     padding: 10px 22px 12px;
@@ -662,7 +651,7 @@
   background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 250ms linear;
+  transition: background-color $transition;
 
   &:hover,
   &:focus {

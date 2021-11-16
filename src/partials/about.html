@@ -1,4 +1,4 @@
-<section class="about about--background">
+<section class="about about--background" id="about">
   <div class="container container--about-wrap">
     <p class="about__subtitle">tradition and love</p>
     <h2 class="about__title">how it’s made?</h2>
@@ -13,11 +13,19 @@
         maximus. Cras massa nibh, tincidunt.
       </p>
       <p class="about__specification">Aliquam erat volutpat. Aenean accumsan.</p>
-      <button class="button-about" type="button">
+      <button class="button-about" type="button" data-modal-open-about>
         Read more<svg class="button-about__icon" width="4" height="8">
           <use href=""></use>
         </svg>
       </button>
     </div>
+    <div class="backdrop is-hidden" data-modal-about>
+      <div class="about__modal">
+        <button type="button" class="about-button-close" data-modal-close-about>
+          <span class="about__close">X</span>
+        </button>
+      </div>
+    </div>
   </div>
+  <!-- -------------- -->
 </section>

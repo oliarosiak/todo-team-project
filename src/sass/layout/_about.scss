@@ -159,11 +159,31 @@
   color: $primary-accent-color;
   @include font(normal, 14px, 700, 18px, normal);
   border-radius: 22px;
+  transition: $transition;
   @media (min-width: 1280px) {
     @include font(normal, 16px, 700, 21px, normal);
+  }
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
   }
 }
 .button-about__icon {
   margin-left: 13px;
   background-color: yellow;
+}
+// ----------------------------------
+.about__modal {
+  background-color: yellow;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  @media screen and (min-width: 768px) {
+    top: 25%;
+    left: 25%;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 15px;
+  }
 }

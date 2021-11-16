@@ -152,7 +152,10 @@
   }
 }
 .button-about {
-  @include flex-center($type: flex);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-top: 10px;
   width: 176px;
   height: 44px;
   background-color: $primary-text-color;
@@ -170,7 +173,6 @@
 }
 .button-about__icon {
   margin-left: 13px;
-  background-color: yellow;
 }
 // ----------------modal------------------
 .backdrop {

@@ -66,6 +66,12 @@
     grid-area: 1 / 3 / 6 / 5;
   }
 }
-// .grid__item--position {
-//   transform: translateY(35px);
+
+// @media screen and(min-width:1280px) {
+//   .grid__item--position {
+//     transform: translateY(35px);
+//   }
+//   .grid__item:hover:nth-child(8) {
+//     transform: translateY(35px);
+//   }
 // }

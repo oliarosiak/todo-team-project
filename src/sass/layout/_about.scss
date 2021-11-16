@@ -159,11 +159,63 @@
   color: $primary-accent-color;
   @include font(normal, 14px, 700, 18px, normal);
   border-radius: 22px;
+  transition: $transition;
   @media (min-width: 1280px) {
     @include font(normal, 16px, 700, 21px, normal);
+  }
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
   }
 }
 .button-about__icon {
   margin-left: 13px;
   background-color: yellow;
+}
+// ----------------modal------------------
+.backdrop {
+  &.is-hidden {
+    & .about__modal {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+}
+.about-modal {
+  position: relative;
+  background-color: rgb(217, 255, 0);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: $transition;
+  width: 300px;
+  height: 300px;
+
+  border-radius: 20px;
+
+  @media (min-width: 768px) {
+    width: 500px;
+    height: 300px;
+  }
+  @media (min-width: 1280px) {
+    width: 700px;
+    height: 300px;
+  }
+}
+.about-modal__button-close {
+  position: absolute;
+  z-index: 1;
+  left: 1060px;
+  top: 57px;
+  background-color: white;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+}
+.about-modal__text {
+  @include font(normal, 58px, 400, 66px, 0.06em);
 }

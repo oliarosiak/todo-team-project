@@ -20,6 +20,22 @@
     height: 430px;
   }
 }
+.grid:hover {
+  opacity: 1;
+  .grid__item & {
+    opacity: 0;
+  }
+}
+
+.grid:hover img {
+  opacity: 0.3;
+  z-index: 1;
+}
+.grid__item img:hover {
+  opacity: 1;
+  z-index: 5;
+}
+
 .grid__item {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);

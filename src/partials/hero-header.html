@@ -1,122 +1,125 @@
-<section class="hero-heade">
-    <div class="containe">
-    <header class="header">
-        <div class="header__container">
-            <a class="logo" href="./index.html">
-                <svg class="logo__icon" width="50" height="50">
-                    <use href="./images/sprite.svg#icon-logo"></use>
-                </svg>
-                <p class="logo__text">icecream</p>
-            </a>
-            <nav class="site-nav">
-                <ul class="site-nav__list">
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="#home">Home</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="#about">About us</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="#made">How it’s made?</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="#product">Our products</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+<header class="header">
+    <div class="containe header__container">
+        <a class="logo" href="./index.html">
+            <svg class="logo__icon" width="50" height="50">
+                <use href="./images/sprite.svg#icon-logo"></use>
+            </svg>
+            <p class="logo__text">icecream</p>
+        </a>
+        <nav class="site-nav">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#home">Home</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#about">About us</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#made">How it’s made?</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#product">Our products</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-            <!-- <button class="button-menu" type="button">
+        <!-- <button class="button-menu" type="button">
                 <svg class="button-menu__icon" width="20" height="12"> -->
-            <button class="button-mobile" type="button">
-                <svg class="button-mobile__icon" width="20" height="12">
+        <button class="button-mobile" type="button">
+            <svg class="button-mobile__icon" width="20" height="12">
 
-                    <use href="./images/sprite.svg#icon-burger-menu"></use>
-                </svg>
-            </button>
-            <button class="button-buy" type="button" data-modal-open>
-                    Buy now
-                    <svg class="button-buy__icon" width="10" height="10">
-                        <use href="./images/sprite.svg#icon-right-red"></use>
+                <use href="./images/sprite.svg#icon-burger-menu"></use>
+            </svg>
+        </button>
+        <button class="button-buy" type="button" data-modal-open>
+            Buy now
+            <svg class="button-buy__icon" width="10" height="10">
+                <use href="./images/sprite.svg#icon-right-red"></use>
+            </svg>
+        </button>
+
+        <!--Modal-order-->
+        <div class="order-backdrop is-hidden" data-modal>
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="square" style="--i:5;"></div>
+            <div class="square" style="--i:6;"></div>
+            <div class="modal__form">
+                <button class="modal__close-btn" type="button" data-modal-close>
+                    <svg width="20" height="20" class="modal__icon-close">
+                        <use href="./images/sprite.svg#icon-close"></use>
                     </svg>
-            </button>
+                </button>
+                <form class="form__sale">
+                    <p class="form__title">Fill out the form and we will call you back.</p>
 
-            <!--Modal-order-->
-            <div class="backdrop is-hidden" data-modal>
-                <div class="square" style="--i:0;"></div>
-                <div class="square" style="--i:1;"></div>
-                <div class="square" style="--i:2;"></div>
-                <div class="square" style="--i:3;"></div>
-                <div class="square" style="--i:4;"></div>
-                <div class="square" style="--i:5;"></div>
-                <div class="square" style="--i:6;"></div>
-                <div class="modal__form">
-                    <button class="modal__close-btn" type="button" data-modal-close>
-                        <svg width="20" height="20" class="modal__icon-close">
-                            <use href="./images/sprite.svg#icon-close"></use>
+                    <!-- Name INPUT -->
+                    <div class="form__field">
+                        <label for="name" class="form__label">Name</label>
+                        <input class="form__input" type="text" name="name" id="name" placeholder="Your name..." />
+                        <svg class="form__icon" width="15" height="12">
+                            <use href="./images/sprite.svg#icon-person"></use>
+                        </svg>
+                    </div>
+
+                    <!-- PHONE INPUT -->
+                    <div class="form__field">
+                        <label for="tel" class="form__label">Number</label>
+                        <input class="form__input" type="tel" name="tel" id="tel" placeholder="Your phone number..." />
+                        <svg class="form__icon" width="15" height="12">
+                            <use href="./images/sprite.svg#icon-phone"></use>
+                        </svg>
+                    </div>
+
+                    <!-- EMAIL INPUT -->
+                    <div class="form__field">
+                        <label for="email" class="form__label">Email</label>
+                        <input class="form__input" type="email" name="email" id="email"
+                            placeholder="Your phone email..." />
+                        <svg class="form__icon" width="15" height="12">
+                            <use href="./images/sprite.svg#icon-email"></use>
+                        </svg>
+                    </div>
+
+                    <!-- COMMENTS INPUT -->
+                    <div class="form__field">
+                        <label for="coments" class="form__label">Comment</label>
+                        <textarea name="coments" id="coments" cols="30" rows="10" placeholder="Your sweetest comment"
+                            class="form__textarea"></textarea>
+                    </div>
+
+                    <!-- AGREEMENT -->
+                    <label for="checkbox" class="form__checkbox-label">
+                        <input type="checkbox" name="checkbox" id="checkbox" class="checkbox" />
+                        <span class="checkbox__icon"></span>
+                        I agree to the newsletter and accept
+                        <a href="" class="checkbox__link">Terms of an agreement</a>
+                    </label>
+                    <button type="submit" class="button-buy button-send">Send message
+                        <svg class="button-buy__icon button-send__icon" width="10" height="10">
+                            <use href="./images/sprite.svg#icon-right-white"></use>
                         </svg>
                     </button>
-                    <form class="form__sale">
-                        <p class="form__title">Fill out the form and we will call you back.</p>
-            
-                        <!-- Name INPUT -->
-                        <div class="form__field">
-                            <label for="name" class="form__label">Name</label>
-                            <input class="form__input" type="text" name="name" id="name" placeholder="Your name..."/>
-                            <svg class="form__icon" width="15" height="12">
-                                <use href="./images/sprite.svg#icon-person"></use>
-                            </svg>
-                        </div>
-            
-                        <!-- PHONE INPUT -->
-                        <div class="form__field">
-                            <label for="tel" class="form__label">Number</label>
-                            <input class="form__input" type="tel" name="tel" id="tel" placeholder="Your phone number..."/>
-                            <svg class="form__icon" width="15" height="12">
-                                <use href="./images/sprite.svg#icon-phone"></use>
-                            </svg>
-                        </div>
-            
-                        <!-- EMAIL INPUT -->
-                        <div class="form__field">
-                            <label for="email" class="form__label">Email</label>
-                            <input class="form__input" type="email" name="email" id="email" placeholder="Your phone email..."/>
-                            <svg class="form__icon" width="15" height="12">
-                                <use href="./images/sprite.svg#icon-email"></use>
-                            </svg>
-                        </div>
-            
-                        <!-- COMMENTS INPUT -->
-                        <div class="form__field">
-                            <label for="coments" class="form__label">Comment</label>
-                            <textarea name="coments" id="coments" cols="30" rows="10" placeholder="Your sweetest comment"
-                                class="form__textarea"></textarea>
-                        </div>
-            
-                        <!-- AGREEMENT -->
-                        <label for="checkbox" class="form__checkbox-label">
-                            <input type="checkbox" name="checkbox" id="checkbox" class="checkbox" />
-                            <span class="checkbox__icon"></span>
-                            I agree to the newsletter and accept
-                            <a href="" class="checkbox__link">Terms of an agreement</a>
-                        </label>
-                        <button type="submit" class="button-buy button-send">Send message
-                            <svg class="button-buy__icon button-send__icon" width="10" height="10">
-                                <use href="./images/sprite.svg#icon-right-white"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+                </form>
             </div>
-            
-
-
         </div>
-    </header>
 
-    <div class="hero__title-main">
+
+
+    </div>
+</header>
+
+<section class="hero">
+    <div class="containe">
+    
+
+        <div class="hero__title-main">
         <h1 class="hero__title">
             ice cream
             made with
@@ -132,17 +135,17 @@
                 <a class="compositions-button__link compositions-button__link--white" href="#made">How it’s made?</a>
             </li>
         </ul>
-    </div>
+        </div>
 
-    <p class="wrap-milk__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-    <button class="button-slider">
+        <p class="wrap-milk__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <button class="button-slider">
         <svg class="button-slider__icon" width="8" height="7">
             <use href="./images/sprite.svg#icon-arrow-right"></use>
         </svg>
-    </button>
+        </button>
     
 
-    <div class="counter">
+        <div class="counter">
         <ul class="counter__list">
             <li class="counter__item">
                 <p class="counter__number">16</p>
@@ -154,9 +157,9 @@
                 <p class="counter__label">food trucks</p>
             </li>
         </ul>
-    </div>  
+        </div>  
     
-    <div class="elips">
+        <div class="elips">
         <picture>
             <source srcset="./images/desktop/hero-ice-W.webp 1x, ./images/desktop/hero-ice_2x-W.webp 2x" media="(min-width: 1280px)"
                 type="image/webp">
@@ -174,9 +177,9 @@
     
         </picture>
 
-    </div>
+        </div>
     
-    <picture>
+        <picture>
         <source srcset="./images/desktop/hero-milk-W.webp 1x, ./images/desktop/hero-milk_2x-W.webp 2x"
             media="(min-width: 1280px)" type="image/webp">
         <source srcset="./images/desktop/hero-milk.png 1x, ./images/desktop/hero-milk_2x.png 2x"
@@ -187,9 +190,9 @@
         <source srcset="./images/tablet/hero-milk_tablet.png 1x, ./images/tablet/hero-milk_2x_tablet.png 2x"
             media="(min-width: 768px)">
         <img class="hero__milk" src="./images/tablet/hero-milk_tablet.png" alt="image with milk">
-    </picture>
+        </picture>
     
-    <picture>
+        <picture>
         <source srcset="./images/desktop/hero-girl-W.webp 1x, ./images/desktop/hero-girl_2x-W.webp 2x"
             media="(min-width: 1280px)" type="image/webp">
         <source srcset="./images/desktop/hero-girl.png 1x, ./images/desktop/hero-girl_2x.png 2x"
@@ -201,7 +204,7 @@
             media="(min-width: 768px)">
         <img class="hero__girl" src="./images/tablet/hero-girl_tablet.png"
             alt="woman with icecream">
-    </picture>
+        </picture>
 
 
     </div>

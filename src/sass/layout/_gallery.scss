@@ -41,7 +41,7 @@
   transition: transform 250ms $transition, box-shadow 250ms $transition;
   overflow: hidden;
   border-radius: 2px;
-
+  cursor: pointer;
   @media screen and(min-width: 768px) {
     border-radius: 10px;
   }

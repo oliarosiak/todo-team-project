@@ -7,7 +7,7 @@
         <b class="contacts__after-subtitle contacts__after-subtitle--margin">Chicago</b>
         <p class="contacts__descr">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-        <hr style="border: 1px solid #e1e1e1" />
+        <div class="contacts__border"></div>
 
         <ul class="contacts__time">
           <li class="contacts__time-item">
@@ -20,7 +20,7 @@
           </li>
         </ul>
 
-        <hr style="border: 1px solid #e1e1e1" />
+        <div class="contacts__border"></div>
 
         <ul>
           <li>
@@ -37,7 +37,7 @@
         <b class="contacts__after-subtitle contacts__after-subtitle--margin">Los Angeles</b>
         <p class="contacts__descr">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-        <hr style="border: 1px solid #e1e1e1" />
+        <div class="contacts__border"></div>
 
         <ul class="contacts__time">
           <li class="contacts__time-item">
@@ -50,7 +50,7 @@
           </li>
         </ul>
 
-        <hr style="border: 1px solid #e1e1e1" />
+        <div class="contacts__border"></div>
 
         <ul>
           <li>
@@ -67,7 +67,7 @@
         <b class="contacts__after-subtitle contacts__after-subtitle--margin">New York</b>
         <p class="contacts__descr">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-        <hr style="border: 1px solid #e1e1e1" />
+        <div class="contacts__border"></div>
 
         <ul class="contacts__time">
           <li class="contacts__time-item">
@@ -80,7 +80,7 @@
           </li>
         </ul>
 
-        <hr style="border: 1px solid #e1e1e1" />
+        <div class="contacts__border"></div>
 
         <ul>
           <li>
@@ -92,21 +92,24 @@
         </ul>
       </li>
     </ul>
-    <div class="contacts__buttons">
-      <button type="button" class="contacts__button-first" locations-open>
-        Our Locations
-        <svg class="contacts__buttons-icon-white" width="8" height="12">
-          <use href="./images/sprite.svg#icon-right-white"></use>
-        </svg>
-      </button>
-      <button type="button" class="contacts__button-second" franchise-open>
-        Franchise
-        <svg class="contacts__buttons-icon-red" width="6" height="10">
-          <use href="./images/sprite.svg#icon-right-red"></use>
-        </svg>
-      </button>
-    </div>
-
+    <ul class="contacts__buttons-list">
+      <li class="contacts__buttons-item">
+        <button type="button" class="contacts__button-first" locations-open>
+          Our Locations
+          <svg class="contacts__buttons-icon-white" width="8" height="12">
+            <use href="./images/sprite.svg#icon-right-white"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="contacts__buttons-item">
+        <button type="button" class="contacts__button-second" franchise-open>
+          Franchise
+          <svg class="contacts__buttons-icon-red" width="6" height="10">
+            <use href="./images/sprite.svg#icon-right-red"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
     <div class="backdrop is-hidden" locations-modal>
       <div class="contacts__modal contacts__modal--locations">
         <h3 class="contacts__modal-title">Our Locations</h3>

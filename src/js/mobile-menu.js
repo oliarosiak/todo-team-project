@@ -3,10 +3,10 @@
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
-  const closeLinkOne = document.querySelector('.js-link-one');
-  const closeLinkTwo = document.querySelector('.js-link-two');
-  const closeLinkThree = document.querySelector('.js-link-three');
-  const closeLinkFour = document.querySelector('.js-link-four');
+  const closeLinkOne = document.querySelector('.js-link-first');
+  const closeLinkTwo = document.querySelector('.js-link-second');
+  const closeLinkThree = document.querySelector('.js-link-third');
+  const closeLinkFour = document.querySelector('.js-link-fourth');
   
 
   const toggleMenu = () => {

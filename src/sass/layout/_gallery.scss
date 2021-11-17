@@ -5,6 +5,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
+  transition: opacity 1000ms $transition;
 
   @media screen and(max-width:767px) {
     height: 122px;
@@ -20,19 +21,13 @@
     height: 430px;
   }
 }
-.grid:hover {
-  opacity: 1;
-  .grid__item & {
-    opacity: 0;
-  }
-}
 
 .grid:hover img {
-  opacity: 0.3;
+  opacity: 0.5;
   z-index: 1;
 }
 .grid__item img {
-  transition: opacity 1000ms $transition;
+  transition: opacity 550ms $transition;
 }
 .grid__item img:hover {
   opacity: 1;

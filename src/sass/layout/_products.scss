@@ -49,46 +49,49 @@
     margin: 0 -15px;
   }
 }
+// ------закоментовано для ефекту обертання карточки-----
 
-.products__item {
-  border-radius: 24px;
+// .products__item {
+//   border-radius: 24px;
 
-  padding: 161px 40px 40px 40px;
-  margin-bottom: 130px;
+//   padding: 161px 40px 40px 40px;
+//   margin-bottom: 130px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
 
-  @media screen and (min-width: 768px) {
-    padding: 152px 11px 40px 11px;
-    margin: 0 10px;
-  }
+//   @media screen and (min-width: 768px) {
+//     padding: 152px 11px 40px 11px;
+//     margin: 0 10px;
+//   }
 
-  @media screen and (min-width: 1280px) {
-    padding: 163px 44px 50px 50px;
-    margin: 0 15px;
-  }
+//   @media screen and (min-width: 1280px) {
+//     padding: 163px 44px 50px 50px;
+//     margin: 0 15px;
+//   }
+//   // --------------
+//   position: relative;
 
-  transition: transform 3000ms;
-}
+//   // transition: transform 3000ms;
+// }
 
-.products__item:hover {
-  transform: rotateY(180deg);
-}
+// .products__item:hover {
+//   transform: rotateY(180deg);
+// }
 
-.products__item--icecream {
-  background-color: $secondary-accent-color;
-}
+// .products__item--icecream {
+//   background-color: $secondary-accent-color;
+// }
 
-.products__item--icecoffee {
-  background-color: #f0d1a5;
-}
+// .products__item--icecoffee {
+//   background-color: #f0d1a5;
+// }
 
-.products__item--milkshakes {
-  background-color: #c2e297;
-}
-
+// .products__item--milkshakes {
+//   background-color: #c2e297;
+// }
+// --------------------------------------
 .products__caption {
   position: relative;
 
@@ -98,6 +101,10 @@
   text-transform: uppercase;
 
   margin-bottom: 66px;
+  transition-property: color, text-shadow;
+  transition-duration: 1000ms;
+  transition-delay: 1300ms;
+  transition-timing-function: linear;
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 70px;
@@ -323,6 +330,10 @@
     @include font($fs: normal, $fz: 16px, $fw: 700, $lh: 28px, $ls: 0.04em);
     margin-bottom: 62px;
   }
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-delay: 1300ms;
+  transition-timing-function: linear;
 }
 
 .products__button {
@@ -331,6 +342,10 @@
   height: 40px;
   border-radius: 50%;
   background-size: contain;
+  transition-property: rotateY();
+  transition-duration: 1000ms;
+  transition-delay: 1300ms;
+  transition-timing-function: linear;
 
   background-image: url('../images/desktop/arrow-right.png');
   @media (min-device-pixel-ratio: 2),
@@ -342,8 +357,84 @@
 
   margin-left: auto;
   margin-right: auto;
+  // -----------------------
+  position: absolute;
+  left: 45%;
+  bottom: 40px;
 }
 
 .products__button:hover + .products__item {
+  transform: rotateY(180deg);
+}
+
+// ------------стилі для анімації----------
+
+.products__scene {
+  // --------скопійовані стилі з .products__item ----------
+  position: relative;
+  border-radius: 24px;
+  padding: 161px 40px 40px 40px;
+  margin-bottom: 130px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 152px 11px 40px 11px;
+    margin: 0 10px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 163px 44px 50px 50px;
+    margin: 0 15px;
+    max-width: 335px;
+  }
+  // ------------------------------------------
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transform: perspective(150px);
+}
+
+.products__scene--icecream {
+  background-color: $secondary-accent-color;
+}
+
+.products__scene--icecoffee {
+  background-color: #f0d1a5;
+}
+
+.products__scene--milkshakes {
+  background-color: #c2e297;
+}
+.products__scene.is-open {
+  transform: perspective(400px) rotateY(360deg);
+}
+.products__scene.is-open .products__description {
+  opacity: 0;
+}
+.products__read-more {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 230px;
+  text-align: center;
+  padding: 25px;
+  @include font(normal, 12px, 500, 19px, normal);
+  color: $primary-accent-color;
+  font-style: italic;
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-delay: 1300ms;
+  transition-timing-function: linear;
+}
+.products__scene.is-open .products__read-more {
+  opacity: 1;
+}
+.products__scene.is-open .products__caption {
+  color: $primary-accent-color;
+  text-shadow: 2px 2px 4px #000000;
+}
+.products__scene.is-open .products__button {
   transform: rotateY(180deg);
 }

@@ -1,5 +1,3 @@
-/*загальні стилі щодо containera*/
-
 .hero-header__container {
   position: relative;
   width: 280px;
@@ -14,8 +12,9 @@
   }
 }
 
-/*---------------HEADER------------------*/
+/*---------------HEADER SECTION------------------*/
 
+// LOGO SITE
 .logo {
   width: 199px;
   height: 50px;
@@ -50,6 +49,7 @@
   }
 }
 
+// NAVIGATION SITE
 .site-nav {
   display: none;
 
@@ -88,7 +88,7 @@
   }
 }
 
-/*-------------------MOBILE BUTTON-------------------*/
+// HAMBURGER
 
 // .button-menu {
 //   z-index: 3;
@@ -114,10 +114,10 @@
   }
 }
 
-/*кнопки */
+// ORDER BUTTON
 .button-buy {
   @extend %button-vector;
-  @include flex-center;
+
   z-index: 1;
   display: none;
   align-items: baseline;
@@ -149,7 +149,7 @@
   }
 }
 
-/*--------Modal-order--------------->*/
+// Modal-order
 
 .order-backdrop.is-hidden {
   opacity: 0;
@@ -224,6 +224,7 @@
   }
 }
 
+// ANIMATE DECORATION
 .square:nth-child(1) {
   @media screen and (min-width: 768px) {
     top: 10px;
@@ -252,14 +253,14 @@
 
 .square:nth-child(3) {
   top: 367px;
-  right: 143px;
+  left: 184px;
   width: 110px;
   height: 110px;
 }
 
 .square:nth-child(4) {
-  top: 200px;
-  right: 70px;
+  top: 289px;
+  right: 241px;
   width: 90px;
   height: 90px;
 }
@@ -274,19 +275,20 @@
 }
 
 .square:nth-child(6) {
-  top: 722px;
-  left: 216px;
+  top: 100px;
+  left: 187px;
   width: 80px;
   height: 80px;
 }
 
 .square:nth-child(7) {
-  top: 93px;
-  right: 254px;
+  top: 68px;
+  right: 183px;
   width: 60px;
   height: 60px;
 }
 
+// MODAL ORDER FORM
 .modal__form {
   max-width: 426px;
   height: auto;
@@ -345,6 +347,7 @@
   }
 }
 
+/*---INPUTS---*/
 .form__field {
   display: flex;
   position: relative;
@@ -471,8 +474,9 @@
   margin-right: auto;
 }
 
-/*-------------HERO TITLE-----------------------*/
+/*------------HERO SECTION-----------------*/
 
+// HERO TITLE
 .hero__title-main {
   margin-top: 113px;
   position: relative;
@@ -528,7 +532,7 @@
   }
 }
 
-/*--------------------HERO BUTTON--------------------*/
+// HERO BUTTON
 
 .compositions-button {
   position: relative;
@@ -581,10 +585,8 @@
   left: 120px;
   display: none;
   width: 121px;
-  font-family: 'DM Sans';
   font-size: 8px;
   line-height: 1.5;
-  color: #ffffff;
 
   @media screen and (min-width: 768px) {
     display: unset;
@@ -637,7 +639,7 @@
   }
 }
 
-/*--------------------HERO-COUNTER---------------------*/
+// HERO-COUNTER
 .counter {
   display: none;
 
@@ -705,7 +707,7 @@
   }
 }
 
-/*--------------------IMAGE-ICE--------------------------*/
+// DECORATION IMAGES
 .elips {
   &::before {
     content: '';

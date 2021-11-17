@@ -105,6 +105,9 @@
   transition-duration: 1000ms;
   transition-delay: 1300ms;
   transition-timing-function: linear;
+  @media (min-width: 768px) {
+    @include font(normal, 20px, 400, 23px, 0.04em);
+  }
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 70px;
@@ -322,12 +325,13 @@
   margin-bottom: 30px;
 
   @media screen and (min-width: 768px) {
-    @include font($fs: normal, $fz: 14px, $fw: 700, $lh: 25px, $ls: 0.04em);
+    @include font(normal, 14px, 700, 25px, 0.04em);
     margin-bottom: 40px;
+    text-transform: none;
   }
 
   @media screen and (min-width: 1280px) {
-    @include font($fs: normal, $fz: 16px, $fw: 700, $lh: 28px, $ls: 0.04em);
+    @include font(normal, 16px, 700, 28px, 0.04em);
     margin-bottom: 62px;
   }
   transition-property: opacity;
@@ -359,14 +363,24 @@
   margin-right: auto;
   // -----------------------
   position: absolute;
-  left: 45%;
+  left: 43%;
   bottom: 40px;
+  @media (min-width: 768px) {
+    left: 40%;
+  }
+  @media (min-width: 1280px) {
+    left: 45%;
+  }
 }
 
 .products__button:hover + .products__item {
   transform: rotateY(180deg);
 }
-
+.products__description--hidden {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 // ------------стилі для анімації----------
 
 .products__scene {
@@ -375,18 +389,15 @@
   border-radius: 24px;
   padding: 161px 40px 40px 40px;
   margin-bottom: 130px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
+  height: 525px;
   @media screen and (min-width: 768px) {
     padding: 152px 11px 40px 11px;
     margin: 0 10px;
+    height: 485px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding: 163px 44px 50px 50px;
+    padding: 163px 44px 80px 50px;
     margin: 0 15px;
     max-width: 335px;
   }
@@ -394,6 +405,7 @@
   transition-duration: 2s;
   transition-timing-function: linear;
   transform: perspective(150px);
+  background-color: orangered;
 }
 
 .products__scene--icecream {
@@ -408,7 +420,8 @@
   background-color: #c2e297;
 }
 .products__scene.is-open {
-  transform: perspective(400px) rotateY(360deg);
+  transform: perspective(500px) rotateY(360deg);
+  background-color: rgb(247, 250, 82);
 }
 .products__scene.is-open .products__description {
   opacity: 0;
@@ -420,13 +433,21 @@
   top: 230px;
   text-align: center;
   padding: 25px;
-  @include font(normal, 12px, 500, 19px, normal);
+  @include font(normal, 12px, 700, 19px, normal);
   color: $primary-accent-color;
-  font-style: italic;
+
   transition-property: opacity;
   transition-duration: 1000ms;
   transition-delay: 1300ms;
   transition-timing-function: linear;
+  @media (min-width: 768px) {
+    top: 195px;
+    @include font(normal, 10px, 700, 19px, normal);
+  }
+  @media (min-width: 1280px) {
+    top: 220px;
+    @include font(normal, 14px, 700, 19px, normal);
+  }
 }
 .products__scene.is-open .products__read-more {
   opacity: 1;

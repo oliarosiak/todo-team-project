@@ -5,6 +5,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
+  transition: opacity 1000ms $transition;
 
   @media screen and(max-width:767px) {
     height: 122px;
@@ -20,37 +21,32 @@
     height: 430px;
   }
 }
-.grid:hover {
-  opacity: 1;
-  .grid__item & {
-    opacity: 0;
-  }
-}
 
 .grid:hover img {
-  opacity: 0.3;
+  opacity: 0.5;
   z-index: 1;
 }
 .grid__item img {
-  transition: opacity 1000ms $transition;
+  transition: opacity 550ms $transition;
 }
 .grid__item img:hover {
   opacity: 1;
 }
 .grid__item {
-  transition: transform 250ms $transition, box-shadow 250ms $transition;
+  transition: transform 1000ms $transition, box-shadow 1000ms $transition,
+    opacity 1000ms $transition;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 10px;
 
   @media screen and(min-width: 768px) {
-    border-radius: 10px;
+    border-radius: 15px;
   }
   @media screen and(min-width: 1280px) {
-    border-radius: 22px;
+    border-radius: 30px;
   }
   &:hover {
-    transform: scale(1.25);
-    box-shadow: 0px 0px 5px 1px rgba(212, 20, 67, 0.2);
+    transform: scale(1.2);
+    box-shadow: 0px 0px 24px 15px rgba(212, 20, 67, 0.2);
     z-index: 1000;
   }
   &:nth-child(1) {

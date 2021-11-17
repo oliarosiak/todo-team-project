@@ -1,15 +1,35 @@
-.hero-header {
-  padding-top: 6px;
-  padding-bottom: 160px;
-  @media (min-width: 768px) {
-    padding-top: 37px;
-    padding-bottom: 34px;
+.header {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 6px;
+  @media screen and (min-width: 768px) {
+    top: 37px;
   }
-  @media (min-width: 1280px) {
-    padding-top: 37px;
-    padding-bottom: 56px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
+
+.hero {
+  padding: 81px 0 160px 0;
+  height: 502px;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    padding: 102px 0 28px 0;
+    height: 399px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 90px 0 45px 0;
+    height: 665px;
+  }
+  background-color: $background-hero-color;
+}
+
 .products {
   background-color: $background-additional-color;
   padding-top: 121px;

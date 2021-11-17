@@ -44,9 +44,6 @@
   background: $primary-text-color;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-  & hr {
-    margin: 25px 0;
-  }
   @media screen and (max-width: 767px) {
     margin: 0 auto;
     width: 220px;
@@ -59,18 +56,23 @@
     & + & {
       margin-left: 20px;
     }
-    & hr {
-      margin: 30px 0;
-    }
   }
   @media screen and (min-width: 1280px) {
     padding: 51px 44px 62px 43px;
     & + & {
       margin-left: 30px;
     }
-    & hr {
-      margin: 32px 0;
-    }
+  }
+}
+
+.contacts__border {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 25px 0;
+  @media screen and (min-width: 768px) {
+    margin: 30px 0;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 32px 0;
   }
 }
 
@@ -176,15 +178,32 @@
   }
 }
 
-.contacts__buttons {
+.contacts__buttons-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 54px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
   @media screen and (min-width: 768px) {
     margin-top: 81px;
-    text-align: center;
   }
   @media screen and (min-width: 1280px) {
     margin-top: 86px;
-    text-align: center;
+  }
+}
+
+.contacts__buttons-item {
+  @media screen and (max-width: 767px) {
+    & + .contacts__buttons-item {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & + .contacts__buttons-item {
+      margin-left: 15px;
+    }
   }
 }
 
@@ -192,18 +211,13 @@
   @extend %button-vector;
   color: $primary-text-color;
   background: $primary-accent-color;
+  width: 161px;
   &:hover,
   &:focus {
     background: #c7133e;
   }
-  @media screen and (max-width: 767px) {
-    display: block;
-    margin: 0 auto;
-    width: 161px;
-  }
   @media screen and (min-width: 768px) {
     width: 191px;
-    margin-right: 15px;
   }
   @media screen and (min-width: 1280px) {
     width: 198px;
@@ -221,15 +235,10 @@
   @extend %button-vector;
   color: $primary-accent-color;
   background: $primary-text-color;
+  width: 161px;
   &:hover,
   &:focus {
     background: #ecebeb;
-  }
-  @media screen and (max-width: 767px) {
-    display: block;
-    margin: 0 auto;
-    width: 161px;
-    margin-top: 10px;
   }
   @media screen and (min-width: 768px) {
     width: 174px;
@@ -247,7 +256,7 @@
 }
 
 .contacts__modal {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: #fff;

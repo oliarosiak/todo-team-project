@@ -267,17 +267,22 @@
   }
 }
 
+.contacts__modal-title {
+  padding-left: 25px;
+  color: $secondary-text-color;
+}
+
 .contacts__modal-close {
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 30px;
-  height: 30px;
-  background: #c7133e;
+  width: 20px;
+  height: 20px;
+  background: #e7e5e5;
   border-radius: 50%;
   cursor: pointer;
   &:hover,
   &:focus {
-    background: #af1539;
+    background: #ebdcdf;
   }
 }

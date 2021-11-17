@@ -1,27 +1,89 @@
 <section class="products" id="product">
-    <div class="container">
-        <p class="products__pretitle">100% natural</p>
-        <h2 class="products__title">products</h2>
-        <ul class="products__list">
-            <li class="products__item products__item--icecream">
-                <h3 class="products__caption products__caption--icecream">ice cream</h3>
-                <p class="products__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna
-                aliqua facilisis.</p>
-                <button type="button" class="products__button"></button>
-            </li>
-            <li class="products__item products__item--icecoffee">
-                <h3 class="products__caption products__caption--icecoffee">ice coffee</h3>
-                <p class="products__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna
-                aliqua facilisis.</p>
-                <button type="button" class="products__button"></button>
-            </li>
-            <li class="products__item products__item--milkshakes">
-                <h3 class="products__caption products__caption--milkshakes">milkshakes</h3>
-                <p class="products__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna
-                aliqua facilisis.</p>
-                <button type="button" class="products__button">
-                </button>
-            </li>
-        </ul>
-    </div>
+  <div class="container">
+    <p class="products__pretitle">100% natural</p>
+    <h2 class="products__title">products</h2>
+    <ul class="products__list">
+      <li class="products__item">
+        <div
+          class="products__scene products__scene--icecream js-menu-container-pro"
+          id="mobileMenu"
+        >
+          <h3 class="products__caption products__caption--icecream">ice cream</h3>
+          <p class="products__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et.<span
+              class="products__description products__description--hidden"
+              >dolore magna aliqua facilisis.</span
+            >
+          </p>
+          <p class="products__read-more">
+            Curiously, HTE has never seen anyone rocking two different flavours on a traditional,
+            twin-cup wafer cone. That is a vessel solely reserved for the double 99 (about which,
+            HTE remains ambivalent).Rather, the two-scoop is a modern invention, simultaneously
+            driven by the rise of larger, posher cones.
+          </p>
+          <button
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="products__button js-open-menu-pro"
+          ></button>
+        </div>
+      </li>
+      <li class="products__item">
+        <div
+          class="products__scene js-menu-container-proo products__scene--icecoffee"
+          id="mobileMenuo"
+        >
+          <h3 class="products__caption products__caption--icecoffee">ice coffee</h3>
+          <p class="products__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et.<span
+              class="products__description products__description--hidden"
+              >dolore magna aliqua facilisis.</span
+            >
+          </p>
+          <p class="products__read-more">
+            Curiously, HTE has never seen anyone rocking two different flavours on a traditional,
+            twin-cup wafer cone. That is a vessel solely reserved for the double 99 (about which,
+            HTE remains ambivalent).Rather, the two-scoop is a modern invention, simultaneously
+            driven by the rise of larger, posher cones.
+          </p>
+          <button
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menuo"
+            class="products__button js-open-menu-proo"
+          ></button>
+        </div>
+      </li>
+      <li class="products__item">
+        <div
+          class="products__scene js-menu-container-proa products__scene--milkshakes"
+          id="mobileMenua"
+        >
+          <h3 class="products__caption products__caption--milkshakes">milkshakes</h3>
+          <p class="products__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et.
+            <span class="products__description products__description--hidden"
+              >dolore magna aliqua facilisis.</span
+            >
+          </p>
+          <p class="products__read-more">
+            Curiously, HTE has never seen anyone rocking two different flavours on a traditional,
+            twin-cup wafer cone. That is a vessel solely reserved for the double 99 (about which,
+            HTE remains ambivalent).Rather, the two-scoop is a modern invention, simultaneously
+            driven by the rise of larger, posher cones.
+          </p>
+          <button
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menua"
+            class="products__button js-open-menu-proa"
+          ></button>
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>

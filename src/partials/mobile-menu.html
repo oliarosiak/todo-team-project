@@ -10,7 +10,7 @@
     </svg>
   </button>
 
-  <button type="button" class="mobile-menu__button btn-light">
+  <button type="button" class="mobile-menu__button btn-light" mobmenu-modal-open-btn>
     Buy now
     <svg class="mobile-menu__icon" width="6" height="10">
       <use href="./images/sprite.svg#icon-right-red"></use>
@@ -36,4 +36,30 @@
       </li>
     </ul>
   </nav>
+
+  <div class="mobmenu-backdrop is-hidden" mobmenu-modal-window>
+    <div class="mobmenu-modal">
+      <button class="mobmenu-modal-btn" type="button" mobmenu-modal-close-btn>
+        <svg class="mobmenu-modal-btn__icon" width="14" height="14">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <form class="mobmenu-form">
+        <p class="mobmenu-form__legend">If you want to buy ice cream now, leave your details below</p>
+
+        <label class="mobmenu-form__label" for="client-name">Your name &dArr;</label>
+        <input class="mobmenu-form__input" type="text" name="client-name" id="client-name" required>
+
+        <label class="mobmenu-form__label" for="client-phone">Your phone &dArr;</label>
+        <input class="mobmenu-form__input mobmenu-form__input--margin" type="tel" name="client-phone" id="client-phone" required>
+
+        <p class="mobmenu-form__legend">&ast; If you want to receive a newsletter with our current offers - also leave your email</p>
+
+        <label class="mobmenu-form__label" for="client-mail">&ast; Your email</label>
+        <input class="mobmenu-form__input" type="email" name="client-mail" id="client-mail">
+
+        <button class="mobmenu-form__btn" type="submit">I need ice cream faster :)</button>
+      </form>
+    </div>
+  </div>
 </div>

@@ -3,8 +3,8 @@
   z-index: 3;
   top: 0;
   right: 0;
-  width: 250px;
-  height: 100%;
+  width: 75vw;
+  height: 100vh;
   overflow: auto;
 
   background-color: #e17992;
@@ -14,7 +14,7 @@
   transition: transform 300ms linear, opacity 300ms linear;
 
   @media screen and (min-width: 768px) {
-    width: 260px;
+    width: 40vw;
   }
 
   &.is-open {
@@ -103,4 +103,111 @@
   &:focus {
     color: $primary-accent-color;
   }
+}
+
+// Стили модального окна в мобильном меню
+
+.mobmenu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity $transition, visibility $transition;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  background-image: linear-gradient(to bottom, #f9ced8, #f9ced8 50%, #e17992 100%, #e17992);
+}
+
+.mobmenu-modal {
+  width: 100%;
+  height: 100%;
+  padding: 60px 15px 10px;
+  overflow-y: scroll;
+  transition: transform $transition;
+  transform: translateX(0%);
+
+  .mobmenu-backdrop.is-hidden & {
+    transform: translateX(101%);
+  }
+
+  background-image: url(../images/mobile/hero-ice_2x_mob.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100px auto;
+}
+
+.mobmenu-modal-btn {
+  display: flex;
+  position: absolute;
+  top: 23px;
+  right: 28px;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: $event-decor-color;
+}
+
+.mobmenu-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.mobmenu-form__legend {
+  font-family: inherit;
+  @include font(normal, 14px, 700, 20px, 0.04em);
+  text-decoration: underline;
+  color: $primary-text-color;
+  margin-bottom: 20px;
+}
+
+.mobmenu-form__label {
+  display: inline-flex;
+  align-items: flex-start;
+  width: 100%;
+  font-family: Titan One;
+  @include font(normal, 12px, 400, 16px, 0.06em);
+  margin-bottom: 5px;
+  color: $primary-accent-color;
+}
+
+.mobmenu-form__input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  // background-color: transparent;
+  background-color: $background-secondary-color;
+  outline: none;
+  border: 0.5px solid $event-decor-color;
+  &--margin {
+    margin-bottom: 20px;
+  }
+}
+
+.mobmenu-form__btn {
+  width: 210px;
+  height: 40px;
+  padding: 0;
+  border-radius: 8px;
+
+  font-family: Titan One;
+  @include font(normal, 12px, 400, 16px, 0.06em);
+  text-transform: uppercase;
+  background-color: $event-decor-color;
+  color: $primary-text-color;
 }

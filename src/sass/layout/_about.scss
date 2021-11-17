@@ -211,12 +211,18 @@
 .about-modal__button-close {
   position: absolute;
   z-index: 1;
-  left: 1060px;
-  top: 57px;
-  background-color: white;
+  left: 260px;
+  top: 0;
+  background-color: rgb(0, 0, 0);
   border-radius: 50px;
   width: 40px;
   height: 40px;
+  @media (min-width: 768px) {
+    left: 460px;
+  }
+  @media (min-width: 1280px) {
+    left: 660px;
+  }
 }
 .about-modal__text {
   @include font(normal, 58px, 400, 66px, 0.06em);

@@ -49,48 +49,38 @@
     margin: 0 -15px;
   }
 }
-// ------закоментовано для ефекту обертання карточки-----
+.products__item {
+  border-radius: 24px;
 
-// .products__item {
-//   border-radius: 24px;
+  padding: 161px 40px 40px 40px;
+  margin-bottom: 130px;
 
-//   padding: 161px 40px 40px 40px;
-//   margin-bottom: 130px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-//   &:last-child {
-//     margin-bottom: 0;
-//   }
+  @media screen and (min-width: 768px) {
+    padding: 152px 11px 40px 11px;
+    margin: 0 10px;
+  }
 
-//   @media screen and (min-width: 768px) {
-//     padding: 152px 11px 40px 11px;
-//     margin: 0 10px;
-//   }
+  @media screen and (min-width: 1280px) {
+    padding: 163px 44px 50px 50px;
+    margin: 0 15px;
+  }
+}
 
-//   @media screen and (min-width: 1280px) {
-//     padding: 163px 44px 50px 50px;
-//     margin: 0 15px;
-//   }
-//   // --------------
-//   position: relative;
+.products__item--icecream {
+  background-color: $secondary-accent-color;
+}
 
-//   // transition: transform 3000ms;
-// }
+.products__item--icecoffee {
+  background-color: #f0d1a5;
+}
 
-// .products__item:hover {
-//   transform: rotateY(180deg);
-// }
-
-// .products__item--icecream {
-//   background-color: $secondary-accent-color;
-// }
-
-// .products__item--icecoffee {
-//   background-color: #f0d1a5;
-// }
-
-// .products__item--milkshakes {
-//   background-color: #c2e297;
-// }
+.products__item--milkshakes {
+  background-color: #c2e297;
+}
 // --------------------------------------
 .products__caption {
   position: relative;
@@ -334,10 +324,6 @@
     @include font(normal, 16px, 700, 28px, 0.04em);
     margin-bottom: 62px;
   }
-  transition-property: opacity;
-  transition-duration: 1000ms;
-  transition-delay: 1300ms;
-  transition-timing-function: linear;
 }
 
 .products__button {
@@ -362,15 +348,15 @@
   margin-left: auto;
   margin-right: auto;
   // -----------------------
-  position: absolute;
-  left: 43%;
-  bottom: 40px;
-  @media (min-width: 768px) {
-    left: 40%;
-  }
-  @media (min-width: 1280px) {
-    left: 45%;
-  }
+  // position: absolute;
+  // left: 43%;
+  // bottom: 40px;
+  // @media (min-width: 768px) {
+  //   left: 40%;
+  // }
+  // @media (min-width: 1280px) {
+  //   left: 45%;
+  // }
 }
 
 .products__button:hover + .products__item {
@@ -383,101 +369,101 @@
 }
 // ------------стилі для анімації----------
 
-.products__scene {
-  // --------скопійовані стилі з .products__item ----------
-  position: relative;
-  border-radius: 24px;
-  padding: 161px 40px 40px 40px;
-  margin-bottom: 130px;
-  height: 525px;
-  @media screen and (min-width: 768px) {
-    padding: 152px 11px 40px 11px;
-    margin: 0 10px;
-    height: 485px;
-  }
+// .products__scene {
+//   // --------скопійовані стилі з .products__item ----------
+//   position: relative;
+//   border-radius: 24px;
+//   padding: 161px 40px 40px 40px;
+//   margin-bottom: 130px;
+//   height: 525px;
+//   @media screen and (min-width: 768px) {
+//     padding: 152px 11px 40px 11px;
+//     margin: 0 10px;
+//     height: 485px;
+//   }
 
-  @media screen and (min-width: 1280px) {
-    padding: 163px 44px 80px 50px;
-    margin: 0 15px;
-    max-width: 335px;
-  }
-  // ------------------------------------------
-  transition-duration: 2s;
-  transition-timing-function: linear;
-  transform: perspective(150px);
-  background-color: orangered;
-}
+//   @media screen and (min-width: 1280px) {
+//     padding: 163px 44px 80px 50px;
+//     margin: 0 15px;
+//     max-width: 335px;
+//   }
+//   // ------------------------------------------
+//   transition-duration: 2s;
+//   transition-timing-function: linear;
+//   transform: perspective(150px);
+//   background-color: orangered;
+// }
 
-.products__scene--icecream {
-  background-color: $secondary-accent-color;
-}
+// .products__scene--icecream {
+//   background-color: $secondary-accent-color;
+// }
 
-.products__scene--icecoffee {
-  background-color: #f0d1a5;
-}
+// .products__scene--icecoffee {
+//   background-color: #f0d1a5;
+// }
 
-.products__scene--milkshakes {
-  background-color: #c2e297;
-}
-.products__scene.is-open {
-  transform: perspective(500px) rotateY(360deg);
-  background-color: rgb(247, 250, 82);
-}
-.products__scene.is-open .products__description {
-  opacity: 0;
-}
-.products__read-more {
-  position: absolute;
-  opacity: 0;
-  left: 0;
-  top: 230px;
-  text-align: center;
-  padding: 25px;
-  @include font(normal, 12px, 700, 19px, normal);
-  color: $primary-accent-color;
+// .products__scene--milkshakes {
+//   background-color: #c2e297;
+// }
+// .products__scene.is-open {
+//   transform: perspective(500px) rotateY(360deg);
+//   background-color: rgb(247, 250, 82);
+// }
+// .products__scene.is-open .products__description {
+//   opacity: 0;
+// }
+// .products__read-more {
+//   position: absolute;
+//   opacity: 0;
+//   left: 0;
+//   top: 230px;
+//   text-align: center;
+//   padding: 25px;
+//   @include font(normal, 12px, 700, 19px, normal);
+//   color: $primary-accent-color;
 
-  transition-property: opacity;
-  transition-duration: 1000ms;
-  transition-delay: 1300ms;
-  transition-timing-function: linear;
-  @media (min-width: 768px) {
-    top: 195px;
-    @include font(normal, 10px, 700, 19px, normal);
-  }
-  @media (min-width: 1280px) {
-    top: 220px;
-    @include font(normal, 14px, 700, 19px, normal);
-  }
-}
-.products__scene.is-open .products__read-more {
-  opacity: 1;
-}
-.products__scene.is-open .products__caption {
-  color: $primary-accent-color;
-  text-shadow: 2px 2px 4px #000000;
-}
-.products__scene.is-open .products__button {
-  transform: rotateY(180deg);
-}
+//   transition-property: opacity;
+//   transition-duration: 1000ms;
+//   transition-delay: 1300ms;
+//   transition-timing-function: linear;
+//   @media (min-width: 768px) {
+//     top: 195px;
+//     @include font(normal, 10px, 700, 19px, normal);
+//   }
+//   @media (min-width: 1280px) {
+//     top: 220px;
+//     @include font(normal, 14px, 700, 19px, normal);
+//   }
+// }
+// .products__scene.is-open .products__read-more {
+//   opacity: 1;
+// }
+// .products__scene.is-open .products__caption {
+//   color: $primary-accent-color;
+//   text-shadow: 2px 2px 4px #000000;
+// }
+// .products__scene.is-open .products__button {
+//   transform: rotateY(180deg);
+// }
 
 // -----------------------------------------------
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.card {
+// .wrapper {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+// }
+.products__item--card-ice {
   position: relative;
-  width: 300px;
-  height: 300px;
-  border: 1px solid;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 20px;
+
+  perspective: 700px;
 }
-.front {
+.products__front-wrap {
   background-color: orangered;
   border: 1px solid rgb(2, 99, 2);
 }
@@ -490,31 +476,34 @@
 .back-color {
   color: rgb(252, 247, 247);
 }
-.front,
+.products__front-wrap,
 .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 1s;
+  // position: absolute;
+  // width: 100%;
+  // height: 100%;
+  // left: 0;
+  // top: 0;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  transition-property: rotateY();
+  transition-duration: 2000ms;
+  transition-timing-function: cubic-bezier(0.42, 0.97, 0.52, 1.49);
+
   backface-visibility: hidden;
 }
-.open-button {
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  background-color: rgb(252, 249, 252);
-}
-.card.is-open .front {
+// .open-button {
+//   z-index: 1;
+//   left: 0;
+//   top: 0;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50px;
+//   background-color: rgb(252, 249, 252);
+// }
+.products__item--icecream.is-open .products__front-wrap {
   transform: rotateY(180deg);
 }
-.card.is-open .back {
+.products__item--icecream.is-open .back {
   transform: rotateY(360deg);
 }

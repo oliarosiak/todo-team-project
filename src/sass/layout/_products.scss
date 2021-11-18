@@ -408,6 +408,9 @@
     height: 600px;
   }
 }
+.back--icecoffee {
+  background-image: linear-gradient(to bottom, rgba(243, 182, 89, 0.63), rgb(209, 127, 32));
+}
 .products__item.is-open .products__front-wrap {
   transform: rotateY(180deg);
 }
@@ -426,6 +429,20 @@
 .back .products__caption--icecream::after {
   backface-visibility: hidden;
 }
+// products__caption--icecoffee
+
+.products__front-wrap .products__caption--icecoffee::before {
+  backface-visibility: hidden;
+}
+.products__front-wrap .products__caption--icecoffee::after {
+  backface-visibility: hidden;
+}
+.back .products__caption--icecoffee::before {
+  backface-visibility: hidden;
+}
+.back .products__caption--icecoffee::after {
+  backface-visibility: hidden;
+}
 
 // -----------back------------
 
@@ -433,11 +450,16 @@
   color: $primary-accent-color;
   text-shadow: 2px 2px 4px #fffdfd;
 }
+.products__caption--color-coffee {
+  color: #af6804;
+  text-shadow: 2px 2px 4px #fffdfd;
+}
+
 .back .products__description {
   text-shadow: 2px 2px 4px #7c0642;
   margin-bottom: 20px;
 }
-.products__button--flip {
+.products__button-flip {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,5 +469,10 @@
   background-color: $background-additional-color;
   margin-left: auto;
   margin-right: auto;
+}
+.products__button-flip--fill-ice {
   fill: $primary-accent-color;
+}
+.products__button-flip--fill-coffee {
+  fill: #af6804;
 }

@@ -1,10 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   @include font(normal, 16px, 400, 28px, 0.04em);
   color: $primary-text-color;
   background-color: $background-additional-color;
   min-width: 320px;
-} 
+}
 
 body.modal-open {
   overflow: hidden;

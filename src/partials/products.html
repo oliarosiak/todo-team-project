@@ -22,10 +22,11 @@
           ></button>
         </div>
         <div class="back">
-          <h3 class="products__caption products__caption--icecream">ice cream</h3>
+          <h3 class="products__caption  products__caption--color products__caption--icecream">ice cream</h3>
           <p class="products__description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et.<span
+            incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et<span
               class="products__description products__description--hidden"
               >dolore magna aliqua facilisis.</span
             >
@@ -34,15 +35,17 @@
             type="button"
             aria-expanded="false"
             aria-controls="cardContainer"
-            class="products__button js-card-open-button"
-          ></button>
+            class="products__button--flip js-card-close-button"
+          ><svg class="about-modal__icon-close" width="20" height="20">
+            <use href="./images/sprite.svg#arrow-left2"></use>
+          </svg></button>
         </div>
       </li>
-      <li class="products__item js-card" id="cardContainer">
+      <li class="products__item js-card-second" id="cardContainerSecond">
         <div
           class="products__front-wrap products__front-wrap--icecoffee products__front-wrap--card"
         >
-          <h3 class="products__caption products__caption--icecream">ice cream</h3>
+          <h3 class="products__caption products__caption--icecoffee">ice cream</h3>
           <p class="products__description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et.<span
@@ -53,16 +56,35 @@
           <button
             type="button"
             aria-expanded="false"
-            aria-controls="cardContainer"
-            class="products__button js-card-open-button"
+            aria-controls="cardContainerSecond"
+            class="products__button js-card-open-button-second"
           ></button>
         </div>
+        <div class="back">
+          <h3 class="products__caption  products__caption--color products__caption--icecream">ice cream</h3>
+          <p class="products__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et<span
+              class="products__description products__description--hidden"
+              >dolore magna aliqua facilisis.</span
+            >
+          </p>
+          <button
+            type="button"
+            aria-expanded="false"
+            aria-controls="cardContainerSecond"
+            class="products__button--flip js-card-close-button-srcond"
+          ><svg class="about-modal__icon-close" width="20" height="20">
+            <use href="./images/sprite.svg#arrow-left2"></use>
+          </svg></button>
+        </div>
       </li>
-      <li class="products__item js-card" id="cardContainer">
+      <li class="products__item js-card-third" id="cardContainerThird">
         <div
           class="products__front-wrap products__front-wrap--milkshakes products__front-wrap--card"
         >
-          <h3 class="products__caption products__caption--icecream">ice cream</h3>
+          <h3 class="products__caption products__caption--milkshakes">ice cream</h3>
           <p class="products__description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et.<span
@@ -73,9 +95,28 @@
           <button
             type="button"
             aria-expanded="false"
-            aria-controls="cardContainer"
-            class="products__button js-card-open-button"
+            aria-controls="cardContainerThird"
+            class="products__button js-card-open-button-third"
           ></button>
+        </div>
+        <div class="back">
+          <h3 class="products__caption  products__caption--color products__caption--icecream">ice cream</h3>
+          <p class="products__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et<span
+              class="products__description products__description--hidden"
+              >dolore magna aliqua facilisis.</span
+            >
+          </p>
+          <button
+            type="button"
+            aria-expanded="false"
+            aria-controls="cardContainerThird"
+            class="products__button--flip js-card-close-button-third"
+          ><svg class="about-modal__icon-close" width="20" height="20">
+            <use href="./images/sprite.svg#arrow-left2"></use>
+          </svg></button>
         </div>
       </li>
     </ul>

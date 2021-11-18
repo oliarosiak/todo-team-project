@@ -39,8 +39,13 @@
 }
 
 .products__list {
-  // width: 280px;
-  margin: 0 -10px;
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
     width: calc(100% / 3 - 20px);
@@ -55,24 +60,9 @@
 }
 .products__item {
   position: relative;
-
-  // padding: 161px 40px 40px 40px;
-  // margin-bottom: 130px;
-
-  // &:last-child {
-  //   margin-bottom: 0;
-  // }
-
-  // @media screen and (min-width: 768px) {
-  //   padding: 152px 11px 40px 11px;
-  //   margin: 0 10px;
-  // }
-
-  // @media screen and (min-width: 1280px) {
-  //   padding: 163px 44px 50px 50px;
-  //   margin: 0 15px;
-  //   height: 600px;
-  // }
+  @media (max-width: 767px) {
+    width: 280px;
+  }
 }
 .products__front-wrap {
   border-radius: 24px;
@@ -80,6 +70,9 @@
   padding: 161px 40px 40px 40px;
   margin-bottom: 130px;
   width: 220px;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -89,12 +82,18 @@
     padding: 152px 11px 40px 11px;
     margin: 0 10px;
     width: 220px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (min-width: 1280px) {
     padding: 163px 44px 50px 50px;
     margin: 0 15px;
     width: 335px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -338,7 +337,6 @@
 .products__description {
   @include font($fs: normal, $fz: 14px, $fw: 700, $lh: 21px, $ls: 0.04em);
   text-align: center;
-  text-transform: uppercase;
 
   margin-bottom: 30px;
 
@@ -371,9 +369,9 @@
   margin-right: auto;
 }
 
-.products__button:hover + .products__front-wrap {
-  transform: rotateY(180deg);
-}
+// .products__button:hover + .products__front-wrap {
+//   transform: rotateY(180deg);
+// }
 .products__description--hidden {
   @media (min-width: 768px) {
     display: none;
@@ -398,6 +396,9 @@
   transition-timing-function: cubic-bezier(0.42, 0.97, 0.52, 1.49);
 
   backface-visibility: hidden;
+}
+.products__front-wrap:last-child {
+  margin-bottom: 0px;
 }
 .back {
   position: absolute;

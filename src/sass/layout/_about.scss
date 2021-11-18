@@ -183,29 +183,28 @@
   }
 }
 .about-modal {
+  padding: 20px;
   position: relative;
-  background-color: rgb(217, 255, 0);
+  background-image: linear-gradient(to top, rgb(255, 85, 130), rgb(241, 235, 237));
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: $transition;
-  width: 300px;
-  height: 300px;
+  width: 100%;
 
   border-radius: 20px;
 
   @media (min-width: 768px) {
     width: 500px;
-    height: 300px;
   }
   @media (min-width: 1280px) {
     width: 700px;
-    height: 300px;
   }
 }
 .about-modal__button-close {
@@ -213,7 +212,7 @@
   z-index: 1;
   left: 260px;
   top: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: $secondary-accent-color;
   border-radius: 50px;
   width: 40px;
   height: 40px;
@@ -225,5 +224,38 @@
   }
 }
 .about-modal__text {
+  @include font($fs: normal, $fz: 18px, $fw: 700, $lh: 21px, $ls: 0.04em);
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+.about-modal__title {
+  width: 300px;
+  color: $primary-accent-color;
+  text-shadow: 2px 2px 4px #fffdfd;
+  font-family: Titan One;
+  @include font(normal, 34px, 400, 39px, 0.04em);
+
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about-modal__text-us {
+  width: 300px;
+  color: $primary-accent-color;
+  text-shadow: 2px 2px 4px #fffdfd;
+  font-family: Titan One;
+  @include font(normal, 34px, 400, 39px, 0.04em);
+
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about-modal__text-happy {
+  font-family: Titan One;
   @include font(normal, 58px, 400, 66px, 0.06em);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px $secondary-accent-color;
 }

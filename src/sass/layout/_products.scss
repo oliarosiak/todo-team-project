@@ -493,6 +493,7 @@
 }
 .products__caption--color-milkshakes {
   color: green;
+  text-shadow: 2px 2px 4px #fffdfd;
 }
 .back .products__description {
   text-shadow: 2px 2px 4px #7c0642;
@@ -517,4 +518,7 @@
 }
 .products__button-flip--fill-milkshake {
   fill: green;
+}
+.products__front-wrap--margin {
+  margin-bottom: 0px;
 }
